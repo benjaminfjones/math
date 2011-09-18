@@ -1,0 +1,325 @@
+#log# Automatic Logger file. *** THIS MUST BE THE FIRST LINE ***
+#log# DO NOT CHANGE THIS LINE OR THE TWO BELOW
+#log# opts = Struct({'__allownew': True,
+ 'interact': 1,
+ 'logfile': '1-12-2011_demazure.txt',
+ 'profile': 'sage'})
+#log# args = []
+#log# It is safe to make manual edits below here.
+#log#-----------------------------------------------------------------------
+sage.misc.preparser.load(sage.misc.preparser.base64.b64decode("L1VzZXJzL2pvbmVzYmUvLnNhZ2UvL2luaXQuc2FnZQ=="),globals(),False)
+_ip.magic("logstart Integer(1)-Integer(12)-2011_demazure")
+_ip.magic("logstop ")
+_ip.magic("logstart '1-12-2011_demazure'")
+_ip.magic("logstop ")
+_ip.magic("logstart '1-12-2011_demazure.txt'")
+
+sage.misc.preparser.load(sage.misc.preparser.base64.b64decode("Ii9Vc2Vycy9qb25lc2JlL0Rlc2t0b3Avc3ZuL3NhZ2VfY29kZS9kZW1henVyZS9kZW1henVyZS5zcHki"),globals(),True)
+sage.misc.preparser.load(sage.misc.preparser.base64.b64decode("Ii9Vc2Vycy9qb25lc2JlL0Rlc2t0b3Avc3ZuL3NhZ2VfY29kZS9kZW1henVyZS9kZW1henVyZS5zYWdlIg=="),globals(),True)
+sage.misc.preparser.load(sage.misc.preparser.base64.b64decode("Ii9Vc2Vycy9qb25lc2JlL0Rlc2t0b3Avc3ZuL3NhZ2VfY29kZS9kZW1henVyZS9kZW1henVyZS5zYWdlIg=="),globals(),True)
+setup_demazure()
+sage.misc.preparser.load(sage.misc.preparser.base64.b64decode("L1VzZXJzL2pvbmVzYmUvRGVza3RvcC9zdm4vc2FnZV9jb2RlL2RlbWF6dXJlL2RlbWF6dXJlLnNhZ2U="),globals(),False)
+setup_demazure()
+alpha
+sage.misc.preparser.load(sage.misc.preparser.base64.b64decode("L1VzZXJzL2pvbmVzYmUvRGVza3RvcC9zdm4vc2FnZV9jb2RlL2RlbWF6dXJlL2RlbWF6dXJlLnNhZ2U="),globals(),False)
+alpha
+alphacheck
+lam
+[ lam[Integer(1)].scalar(alphacheck[i]) for in in [Integer(1),Integer(2)] ]
+[ lam[Integer(1)].scalar(alphacheck[i]) for i in [Integer(1),Integer(2)] ]
+[ lam[Integer(2)].scalar(alphacheck[i]) for i in [Integer(1),Integer(2)] ]
+[ alpha[Integer(1)].scalar(alphacheck[i]) for i in [Integer(1),Integer(2)] ]
+[ alpha[Integer(2)].scalar(alphacheck[i]) for i in [Integer(1),Integer(2)] ]
+l = Integer(2)*lam[Integer(1)] + Integer(2)*lam[Integer(2)]
+l
+l.scalar(alphacheck[Integer(1)])
+l2 = l - Integer(2)*alpha[Integer(1)]
+l2
+l2.scalar(alphacheck[Integer(2)])
+ch = a(l)
+ch.mlist()
+ch += a(l-alpha) + a(l-Integer(2)*alpha)
+ch = ch + a(l-alpha) + a(l-Integer(2)*alpha)
+ch.mlist()
+ch = ch + a(l-alpha[Integer(1)]) + a(l-Integer(2)*alpha[Integer(1)])
+ch
+list(ch)
+ch.
+#?ch.additive_order
+#?ch.n
+ch.db
+#?ch.db
+ch.mlist()
+wt = ch[Integer(1)]
+wt = ch.mlist()[Integer(1)]
+wt
+*wt
+wt1,wt2 = *wt
+(wt1,wt2) = *wt
+(wt1,wt2) = wt
+wt1
+wt2
+for (wt,wtm) in ch.mlist(): print wt
+for (wt,wtm) in ch.mlist():
+    ch_temp = sum([a(wt-i*alpha[Integer(2)]) for i in range(n)])
+    n = wt.scalar(alphacheck[Integer(2)])
+ch_temp=a(Integer(0))
+for (wt,wtm) in ch.mlist():
+    ch_temp += sum([a(wt-i*alpha[Integer(2)]) for i in range(n)])
+ch_temp=a(Integer(0))
+for (wt,wtm) in ch.mlist():
+    n = wt.scalar(alphacheck[Integer(2)])
+    ch_temp += wtm * sum([a(wt-i*alpha[Integer(2)]) for i in range(n)])
+ch_temp
+coroot = dict([ (alpha[i],alphacheck[i]) for i in
+                  space.index_set() ])
+coroot[alpha[Integer(1)]]
+coroot[alpha[Integer(2)]]
+sage.misc.preparser.load(sage.misc.preparser.base64.b64decode("L1VzZXJzL2pvbmVzYmUvRGVza3RvcC9zdm4vc2FnZV9jb2RlL2RlbWF6dXJlL2RlbWF6dXJlLnNhZ2U="),globals(),False)
+rho = sum(list(lam))
+rho
+sage.misc.preparser.load(sage.misc.preparser.base64.b64decode("L1VzZXJzL2pvbmVzYmUvRGVza3RvcC9zdm4vc2FnZV9jb2RlL2RlbWF6dXJlL2RlbWF6dXJlLnNhZ2U="),globals(),False)
+ch = a(Integer(2)*rho)
+# apply Lambda_1
+ch_temp=a(Integer(0))
+for (wt,wtm) in ch.mlist():
+    n = wt.scalar(coroot[alpha[Integer(1)]])
+    ch_temp += wtm * sum([a(wt-i*alpha[Integer(1)]) for i in range(n+Integer(1))])
+ch = ch_temp
+ch_temp=a(Integer(0))
+for (wt,wtm) in ch.mlist():
+    n = wt.scalar(coroot[alpha[Integer(2)]])
+    ch_temp += wtm * sum([a(wt-i*alpha[Integer(2)]) for i in range(n+Integer(1))])
+ch = ch_temp
+#?copy
+sage.misc.preparser.load(sage.misc.preparser.base64.b64decode("L1VzZXJzL2pvbmVzYmUvRGVza3RvcC9zdm4vc2FnZV9jb2RlL2RlbWF6dXJlL2RlbWF6dXJlLnNhZ2U="),globals(),False)
+# apply demazure operators Lambda_1 and then Lambda_2 to the dominant character
+# a(2*rho)
+ch = a(Integer(2)*rho)
+# apply Lambda_1
+ch_temp=a(Integer(0))
+for (wt,wtm) in ch.mlist():
+    n = wt.scalar(coroot[alpha[Integer(1)]])
+    ch_temp += wtm * sum([a(wt-i*alpha[Integer(1)]) for i in range(n+Integer(1))])
+ch = copy(ch_temp)
+ch_temp=a(Integer(0))
+for (wt,wtm) in ch.mlist():
+    n = wt.scalar(coroot[alpha[Integer(2)]])
+    ch_temp += wtm * sum([a(wt-i*alpha[Integer(2)]) for i in range(n+Integer(1))])
+ch = copy(ch_temp)
+sage.misc.preparser.load(sage.misc.preparser.base64.b64decode("L1VzZXJzL2pvbmVzYmUvRGVza3RvcC9zdm4vc2FnZV9jb2RlL2RlbWF6dXJlL2RlbWF6dXJlLnNhZ2U="),globals(),False)
+ch = a(Integer(2)*rho)
+# apply Lambda_1
+ch_temp=a(Integer(0))
+for (wt,wtm) in ch.mlist():
+    n = wt.scalar(coroot[alpha[Integer(1)]])
+    ch_temp += wtm * sum([a(wt-i*alpha[Integer(1)]) for i in range(n+Integer(1))])
+ch = copy(ch_temp)
+sage.misc.preparser.load(sage.misc.preparser.base64.b64decode("L1VzZXJzL2pvbmVzYmUvRGVza3RvcC9zdm4vc2FnZV9jb2RlL2RlbWF6dXJlL2RlbWF6dXJlLnNhZ2U="),globals(),False)
+sage.misc.preparser.load(sage.misc.preparser.base64.b64decode("L1VzZXJzL2pvbmVzYmUvRGVza3RvcC9zdm4vc2FnZV9jb2RlL2RlbWF6dXJlL2RlbWF6dXJlLnNhZ2U="),globals(),False)
+ch
+sage.misc.preparser.load(sage.misc.preparser.base64.b64decode("L1VzZXJzL2pvbmVzYmUvRGVza3RvcC9zdm4vc2FnZV9jb2RlL2RlbWF6dXJlL2RlbWF6dXJlLnNhZ2U="),globals(),False)
+ch
+#?detach
+attached_files()
+detatch
+#?detatch
+#?detach
+reset
+#?reset
+reset()
+attached_files()
+a
+A
+#?load
+file = "/Users/jonesbe/Desktop/svn/sage_code/demazure/demazure.sage"
+load(file)
+ch
+ch
+ch
+load(file)
+ch
+#?ch.parent
+ch.parent()
+space.simple_root(Integer(1))
+space.index_set()
+#?raise
+raise IndexError
+raise IndexError('hi')
+i=Integer(5)
+i.to_str
+i.str
+i.str()
+load(file)
+load(file)
+ch = a(rho)
+D_operator(ch, Integer(1))
+D_operator(ch, Integer(2))
+ch = a(Integer(2)*rho)
+D21 = D_operator(D_operator(ch,Integer(1)),Integer(2))
+D21
+D21.dim()
+D21.rank()
+D21.order()
+D21.character()
+D21.n()
+D21.abs()
+D21.mlist()
+ch.mlist().values()
+ch.mlist()
+dict(ch.mlist())
+dict(ch.mlist()).values()
+sum(dict(D21.mlist()).values())
+load(file)
+WR_dim(D21)
+i=[Integer(1),Integer(2),Integer(3)]
+type(i)
+type(i)=='list'
+type(i)==List
+type(i)==ListYpe
+type(i)==ListType
+type(i)==list
+Integer(0)+ch
+_ip.system("load")
+load(file)
+D_operator(ch,Integer(1))
+D_operator(ch,Integer(3))
+D_operator(ch,Integer(0))
+D_operator(ch,'bob')
+s='bob'
+s.__str__
+s.__str__()
+i
+i.__str__()
+load(file)
+D_operator(ch,'bob')
+D_operator(ch,[Integer(1),Integer(2)]_
+D_operator(ch,[Integer(1),Integer(2)])
+D_operator(ch,[Integer(2),Integer(1)])
+i = [Integer(1),Integer(2)]
+for j in i
+for j in i:
+    print
+ch_temp=copy(ch)
+ch_tmep
+ch_temp
+ch
+ch = a(Integer(2)*rho)
+D_operator(ch,[Integer(1),Integer(2)])
+D_operator(ch,[Integer(2),Integer(1)])
+WR_dim(D21)
+WR_dim(D_operator(ch,[Integer(1),Integer(2)]))
+WR_dim(D_operator(ch,[Integer(2),Integer(1)]))
+#?WeightRing
+#?WeightRing?
+class WeightRing
+class WeightRing:
+    def dim():
+        return sum([m for (w,m) in self.mlist()])
+load(file)
+reset()
+#?WeightRing
+#?WeightRing?
+file = "/Users/jonesbe/Desktop/svn/sage_code/demazure/demazure.sage"
+load(file)
+ch = a(Integer(2)*rho)
+D_operator(ch,[Integer(1),Integer(2)])
+range(Integer(1),Integer(2))
+load(file)
+D_operator(ch,[Integer(1),Integer(2)])
+D_operator(ch,[Integer(1),Integer(2),Integer(1)])
+D_operator(ch,[Integer(2),Integer(1),Integer(2)])
+n
+-n
+for (wt,m) in D_operator(ch,[Integer(2),Integer(1),Integer(2)]).mlist():
+    print wt.scalar(Integer(2)*alpha[Integer(1)]/alpha[Integer(1)].scalar(alpha[Integer(1)]))
+D_operator(ch,[Integer(2),Integer(1),Integer(3)])
+Integer(1) <= Integer(3)
+Integer(1) ?= Integer(3)
+Integer(1) >= Integer(3)
+load(file)
+D_operator(ch,[Integer(2),Integer(1),Integer(1)])
+D_operator(ch,[Integer(1),Integer(2)])
+alpha[Integer(1)
+alpha[Integer(1)]
+alpha[Integer(1)]
+alpha[Integer(2)]
+D_operator(ch,[Integer(1)])
+ch
+ch = a(Integer(2)*rho)
+D_operator(ch,[Integer(1)])
+ch
+D_operator(ch,[Integer(1),Integer(2)])
+ch
+D_operator(ch,[Integer(1),Integer(2),Integer(1)])
+WR_dim(D_operator(ch,[Integer(1),Integer(2),Integer(1)]))
+wch = A2(Integer(2)*rho)
+wch = A(Integer(2)*rho)
+wch.order()
+wch.degree()
+wch ==
+wch == D_operator(ch,[Integer(1),Integer(2),Integer(1)])
+wch == D_operator(ch,[Integer(2),Integer(1),Integer(2)])
+wch
+wch.mlist()
+wch.mlist() == D_operator(ch,[Integer(2),Integer(1),Integer(2)]).mlist()
+wch.mlist()
+D_operator(ch,[Integer(2),Integer(1),Integer(2)]).mlist()
+#?WeylCharacterRing?
+sorted(wch.mlist())
+sorted(D_operator(ch,[Integer(2),Integer(1),Integer(2)]).mlist())
+sorted(wch.mlist()) == sorted(D_operator(ch,[Integer(2),Integer(1),Integer(2)]).mlist())
+c
+ch
+_ip.magic("history ")
+A = WeylCharacterRing(['A',Integer(2)])
+a = WeightRing(A)
+space = a.space()
+lam = space.fundamental_weights()
+rho = sum(list(lam))
+wch = A2(Integer(2)*rho)
+sorted(wch.mlist()) == sorted(D_operator(ch,[Integer(2),Integer(1),Integer(2)]).mlist())
+A = WeylCharacterRing(['A',Integer(2)])
+a = WeightRing(A)
+space = a.space()
+lam = space.fundamental_weights()
+rho = sum(list(lam))
+wch = A2(Integer(2)*rho)
+sorted(wch.mlist()) == sorted(D_operator(ch,[Integer(2),Integer(1),Integer(2)]).mlist())
+A = WeylCharacterRing(['A',Integer(2)])
+a = WeightRing(A)
+space = a.space()
+lam = space.fundamental_weights()
+rho = sum(list(lam))
+wch = A(Integer(2)*rho)
+sorted(wch.mlist()) == sorted(D_operator(ch,[Integer(2),Integer(1),Integer(2)]).mlist())
+reset()
+file = "/Users/jonesbe/Desktop/svn/sage_code/demazure/demazure.sage"
+load(file)
+A = WeylCharacterRing(['A',Integer(2)])
+a = WeightRing(A)
+space = a.space()
+lam = space.fundamental_weights()
+rho = sum(list(lam))
+wch = A(Integer(2)*rho)
+sorted(wch.mlist()) == sorted(D_operator(ch,[Integer(2),Integer(1),Integer(2)]).mlist())
+A = WeylCharacterRing(['A',Integer(2)])
+a = WeightRing(A)
+space = a.space()
+lam = space.fundamental_weights()
+rho = sum(list(lam))
+wch = A(Integer(2)*rho)
+ch = a(Integer(2)*rho)
+sorted(wch.mlist()) == sorted(D_operator(ch,[Integer(2),Integer(1),Integer(2)]).mlist())
+D_operator(ch,[Integer(2),Integer(1),Integer(2)])
+wch.mlist()
+A = WeylCharacterRing(['A',Integer(2)])
+a = WeightRing(A)
+space = a.space()
+lam = space.fundamental_weights()
+rho = sum(list(lam))
+wch = A(Integer(2)*rho) # character of the irred. representation
+ch = a(Integer(2)*rho)  # element in the weight ring
+dch = D_operator(ch,[Integer(2),Integer(1),Integer(2)]) # apply 3 Demazure operators
+sorted(wch.mlist()) == sorted(dch.mlist())
+_ip.magic("quit ")

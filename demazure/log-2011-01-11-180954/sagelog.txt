@@ -1,0 +1,146 @@
+Sage Log 2011-01-11-180954
+1 sage: # load /Users/jonesbe/.sage//init.sage
+3 sage: import this
+
+  Finite family {1: (1, 0, 0), 2: (1, 1, 0)}
+
+4 sage: A2 = WeylCharacterRing(['A',2])
+
+  A2(2,1,0)
+
+5 sage: A2.fundamental_weights()
+
+  [[(1, 2, 0), 1], [(2, 1, 0), 1], [(0, 2, 1), 1], [(1, 1, 1), 2], [(0, 1, 2), 1], [(2, 0, 1), 1], [(1, 0, 2), 1]]
+
+6 sage: A2((2,1,0))
+
+  [[(0, 1, 0), 1], [(1, 0, 0), 1], [(0, 0, 1), 1]]
+
+7 sage: A2((2,1,0)).mlist()
+
+  [[(0, 1, 1), 1], [(1, 0, 1), 1], [(1, 1, 0), 1]]
+
+8 sage: A2((1,0,0)).mlist()
+9 sage: A2((1,1,0)).mlist()
+
+  [[(0, 0, 0), 1]]
+
+10 sage: A2((0,0,1)).mlist()
+11 sage: A2((0,0,0)).mlist()
+12 sage: WeylCharacterRing?
+13 sage: WeylCharacterRing??
+14 sage: log_text?
+16 sage: L=log_text("/Users/jonesbe/Desktop/")
+17 sage: A2 = WeylCharacterRing(['A',2])
+18 sage: a2 = WeightRing(A2)
+19 sage: W = a2.space().weyl_group()
+20 sage: W.gens()
+21 sage: W.order()
+22 sage: W.random_element()
+23 sage: W.cayley_graph()
+24 sage: W.cayley_graph().show()
+25 sage: W.get_action?
+27 sage: L=a2.space()
+28 sage: L.gens()
+29 sage: L.basis()
+30 sage: type(L)
+31 sage: L.simple_roots()
+32 sage: L.roots()
+33 sage: L.positive_roots()
+34 sage: alpha,beta = L.positive_roots()
+35 sage: L.simple_root()
+36 sage: L.simple_root?
+39 sage: L.simple_root(1)
+40 sage: L.simple_root(2)
+41 sage: L.simple_root(0)
+42 sage: L.simple_root(3)
+43 sage: L.simple_root(4)
+44 sage: alpha,beta = (L.simple_root(1), L.simple_root(2))
+45 sage: alpha
+46 sage: beta
+47 sage: lambda = alpha+beta
+48 sage: lam = alpha+beta
+49 sage: lam
+50 sage: S = [ lam-i*alpha for i in [0..4] ]
+51 sage: S
+52 sage: S = [ a2(lam-i*alpha) for i in [0..4] ]
+53 sage: S
+54 sage: x = a2(1,0,-1)
+55 sage: x.mlist()
+56 sage: x = 2*a2(1,0,-1)
+57 sage: x.mlist()
+59 sage: alpha = a2.space().simple_roots()
+60 sage: alpha
+61 sage: list(alpha)
+62 sage: alphacheck = a2.space().simple_coroots()
+63 sage: alphacheck
+64 sage: list(alphacheck)
+65 sage: lam = a2.space().basis()
+66 sage: list(lam)
+67 sage: [ lam[i].scalar(alphacheck[1]) for i in a2.space().index_set()]
+68 sage: [ lam[i].scalar(alphacheck[1]) for i in a2.space().index_set() ]
+69 sage: [ lam[i].scalar(alphacheck[2]) for i in a2.space().index_set() ]
+70 sage: space=a2.space()
+71 sage: a2.space?
+73 sage: R=RootSystem(['A',2]); R
+74 sage: space = R.root_lattice()
+75 sage: space.base_ring()
+76 sage: space.basis()
+77 sage: alpha = space.simple_roots()
+78 sage: alphacheck=space.simple_coroots()
+79 sage: list(alphacheck)
+80 sage: space=R.weight_space()
+81 sage: space
+82 sage: list(space.basis())
+83 sage: [Lambda[i].scalar(alphacheck[1]) for i in space.index_set()]
+84 sage: Lambda = space.fundamental_weights()
+85 sage: [Lambda[i].scalar(alphacheck[1]) for i in space.index_set()]
+86 sage: [Lambda[i].scalar(alphacheck[2]) for i in space.index_set()]
+87 sage: Lambda[1]
+88 sage: l = Lambda[1]+Lambda[2]
+89 sage: l.simple_reflection(1)
+90 sage: l.simple_reflection(2)
+91 sage: l.simple_reflection(3)
+92 sage: n = l.scalar(alphacheck[1])
+93 sage: n = l.scalar(alphacheck[1]); n
+94 sage: n = l.scalar(alphacheck[2]); n
+95 sage: n = Lambda[1].scalar(alphacheck[2]); n
+96 sage: n = Lambda[2].scalar(alphacheck[2]); n
+97 sage: l.coefficients()
+98 sage: R
+99 sage: space
+100 sage: space.basis()
+101 sage: a2space = a2.space()
+102 sage: a2space
+103 sage: a2space.basis()
+104 sage: a2space.fundamental_weight(1)
+105 sage: a2space.fundamental_weight(2)
+106 sage: a2space.fundamental_weight(3)
+107 sage: a2space.fundamental_weight(4)
+108 sage: l
+109 sage: a2space.simple_rootS()
+110 sage: a2space.simple_roots()
+111 sage: list(a2space.simple_roots())
+112 sage: alpha = a2space.simple_roots(); alpha
+113 sage: alpha[1]
+114 sage: alpha[2]
+115 sage: 2*alpha[1]/alpha[1].scalar(alpha[1])
+116 sage: alphacheck = [ 2*alpha[i]/alpha[i].scalar(alpha[i]) for i in a2space.index_set() ]
+117 sage: alphacheck
+118 sage: Lambda = a2space.fundamental_weights()
+119 sage: Lambda[1]
+120 sage: Lambda[2]
+121 sage: Lambda[1].scalar(alphacheck[1])
+122 sage: Lambda[2].scalar(alphacheck[1])
+123 sage: Lambda[1].scalar(alphacheck[2])
+124 sage: alphacheck = [ {i:2*alpha[i]/alpha[i].scalar(alpha[i])} for i in a2space.index_set() ]
+125 sage: alphacheck
+126 sage: alphacheck[1]
+127 sage: alphacheck[2]
+128 sage: { i:i*i for i in range(3) }
+129 sage: alphacheck = dict([ (i:2*alpha[i]/alpha[i].scalar(alpha[i])) for i in a2space.index_set() ])
+130 sage: alphacheck = dict([ (i,2*alpha[i]/alpha[i].scalar(alpha[i])) for i in a2space.index_set() ])
+131 sage: alphacheck
+132 sage: type(alpha)
+133 sage: dict(alpha)
+

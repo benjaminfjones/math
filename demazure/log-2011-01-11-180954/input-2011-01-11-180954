@@ -1,0 +1,126 @@
+# load /Users/jonesbe/.sage//init.sage
+import this
+A2 = WeylCharacterRing(['A',2])
+A2.fundamental_weights()
+A2((2,1,0))
+A2((2,1,0)).mlist()
+A2((1,0,0)).mlist()
+A2((1,1,0)).mlist()
+A2((0,0,1)).mlist()
+A2((0,0,0)).mlist()
+WeylCharacterRing?
+WeylCharacterRing??
+log_text?
+L=log_text("/Users/jonesbe/Desktop/")
+A2 = WeylCharacterRing(['A',2])
+a2 = WeightRing(A2)
+W = a2.space().weyl_group()
+W.gens()
+W.order()
+W.random_element()
+W.cayley_graph()
+W.cayley_graph().show()
+W.get_action?
+L=a2.space()
+L.gens()
+L.basis()
+type(L)
+L.simple_roots()
+L.roots()
+L.positive_roots()
+alpha,beta = L.positive_roots()
+L.simple_root()
+L.simple_root?
+L.simple_root(1)
+L.simple_root(2)
+L.simple_root(0)
+L.simple_root(3)
+L.simple_root(4)
+alpha,beta = (L.simple_root(1), L.simple_root(2))
+alpha
+beta
+lambda = alpha+beta
+lam = alpha+beta
+lam
+S = [ lam-i*alpha for i in [0..4] ]
+S
+S = [ a2(lam-i*alpha) for i in [0..4] ]
+S
+x = a2(1,0,-1)
+x.mlist()
+x = 2*a2(1,0,-1)
+x.mlist()
+alpha = a2.space().simple_roots()
+alpha
+list(alpha)
+alphacheck = a2.space().simple_coroots()
+alphacheck
+list(alphacheck)
+lam = a2.space().basis()
+list(lam)
+[ lam[i].scalar(alphacheck[1]) for i in a2.space().index_set()]
+[ lam[i].scalar(alphacheck[1]) for i in a2.space().index_set() ]
+[ lam[i].scalar(alphacheck[2]) for i in a2.space().index_set() ]
+space=a2.space()
+a2.space?
+R=RootSystem(['A',2]); R
+space = R.root_lattice()
+space.base_ring()
+space.basis()
+alpha = space.simple_roots()
+alphacheck=space.simple_coroots()
+list(alphacheck)
+space=R.weight_space()
+space
+list(space.basis())
+[Lambda[i].scalar(alphacheck[1]) for i in space.index_set()]
+Lambda = space.fundamental_weights()
+[Lambda[i].scalar(alphacheck[1]) for i in space.index_set()]
+[Lambda[i].scalar(alphacheck[2]) for i in space.index_set()]
+Lambda[1]
+l = Lambda[1]+Lambda[2]
+l.simple_reflection(1)
+l.simple_reflection(2)
+l.simple_reflection(3)
+n = l.scalar(alphacheck[1])
+n = l.scalar(alphacheck[1]); n
+n = l.scalar(alphacheck[2]); n
+n = Lambda[1].scalar(alphacheck[2]); n
+n = Lambda[2].scalar(alphacheck[2]); n
+l.coefficients()
+R
+space
+space.basis()
+a2space = a2.space()
+a2space
+a2space.basis()
+a2space.fundamental_weight(1)
+a2space.fundamental_weight(2)
+a2space.fundamental_weight(3)
+a2space.fundamental_weight(4)
+l
+a2space.simple_rootS()
+a2space.simple_roots()
+list(a2space.simple_roots())
+alpha = a2space.simple_roots(); alpha
+alpha[1]
+alpha[2]
+2*alpha[1]/alpha[1].scalar(alpha[1])
+alphacheck = [ 2*alpha[i]/alpha[i].scalar(alpha[i]) for i in a2space.index_set() ]
+alphacheck
+Lambda = a2space.fundamental_weights()
+Lambda[1]
+Lambda[2]
+Lambda[1].scalar(alphacheck[1])
+Lambda[2].scalar(alphacheck[1])
+Lambda[1].scalar(alphacheck[2])
+alphacheck = [ {i:2*alpha[i]/alpha[i].scalar(alpha[i])} for i in a2space.index_set() ]
+alphacheck
+alphacheck[1]
+alphacheck[2]
+{ i:i*i for i in range(3) }
+alphacheck = dict([ (i:2*alpha[i]/alpha[i].scalar(alpha[i])) for i in a2space.index_set() ])
+alphacheck = dict([ (i,2*alpha[i]/alpha[i].scalar(alpha[i])) for i in a2space.index_set() ])
+alphacheck
+type(alpha)
+dict(alpha)

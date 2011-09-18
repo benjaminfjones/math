@@ -1,21 +1,26 @@
 Computational Mathematics Projects
 ==================================
 
- * Continued Fraction Period for Quadratic Surds
+ * Continued Fraction Period for Quadratic Surds (continued_fractions)
 
-	Fast Sage code for computing the perdiod (and pre-period) of
-	the continued fraction expansion of a quadratic irrational 
-	number.
+    Fast Sage code for computing the period (and pre-period) of
+    the continued fraction expansion of a quadratic irrational 
+    number.
 
- * KPJ Strata
+ * Demazure character formula (demazure)
 
-	Enumeration of Kraft-Procesi-Johnson strata in the Enhanced
-	Nilpotent Cone. This project is work in progress.
+    Computing the Demazure character formula in Sage. This is code
+    to be contibuted to the combinat/root_system/weyl_character module.
 
- * Zelevinsky Resolutions and CSM Classes
+ * KPJ Strata (KPJStrata)
 
-	This project contains Sage code for doing combinatorics related
-	to Zelevinsky Resolutions and computing Chern-Schwartz-MacPherson
-	classes of Schubert varieties in Grassmanians. See [1]_
+    Enumeration of Kraft-Procesi-Johnson strata in the Enhanced
+    Nilpotent Cone. This project is work in progress.
 
-..[1]: http://dx.doi.org/10.1093/imrn/rnp174
+ * Zelevinsky Resolutions and CSM Classes (csm)
+
+    This project contains Sage code for doing combinatorics related
+    to Zelevinsky Resolutions and computing Chern-Schwartz-MacPherson
+    classes of Schubert varieties in Grassmanians. See [1]_
+
+.. _[1]: http://dx.doi.org/10.1093/imrn/rnp174
