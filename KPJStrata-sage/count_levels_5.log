@@ -1,0 +1,99 @@
+[23:55:11] jonesbe@MacBookPro ~> c[Ky[Kmysage
+bash: mysage: command not found
+[23:55:25] jonesbe@MacBookPro ~> ls
+120			Movies			sage
+154			Music			sage-from-source.sh
+Desktop			Pictures		screenlog.0
+Documents		Public			src
+Downloads		Sites			test.log
+Dropbox			ipython_log.py		test.log~
+Library			local-dot-sage		tmp
+[23:55:28] jonesbe@MacBookPro ~> cd [K[K[K~[Ksourhce [K[K[K[Kce ~/.bash+[r[K[K[K_profile
+[23:55:40] jonesbe@MacBookPro ~> mysage
+----------------------------------------------------------------------
+| Sage Version 4.6.2, Release Date: 2011-02-25                       |
+| Type notebook() for the GUI, and license() for information.        |
+----------------------------------------------------------------------
+sage: attach 'KPJStrata.sage'
+Compiling /Users/jonesbe/Desktop/svn/sage_code/KPJStrata/bucket_fill.spyx...
+sage: count
+count_all_levels_parallel  count_levels
+count_kpj_levels_parallel  
+sage: count_all_levels_parallel(5),[K[K, pretty-[K=True)
+r = [1, 1, 1, 1, 1], I = [] ...  TRIVIAL
+r = [1, 1, 1, 2], I = [] ...  TRIVIAL
+r = [1, 2, 2], I = [] ...  TRIVIAL
+r = [1, 1, 3], I = [] ...  TRIVIAL
+r = [2, 3], I = [] ...  TRIVIAL
+r = [1, 4], I = [] ...  TRIVIAL
+r = [5], I = [] ...  TRIVIAL
+r = [1, 1, 1, 1, 1], I = [0] ...  TRIVIAL
+r = [1, 1, 1, 2], I = [0] ...  TRIVIAL
+r = [1, 2, 2], I = [0] ...  TRIVIAL
+r = [1, 1, 3], I = [0] ...  TRIVIAL
+r = [1, 4], I = [0] ...  TRIVIAL
+r = [1, 1, 1, 1, 1], I = [0, 1] ...  TRIVIAL
+r = [1, 1, 1, 2], I = [0, 1] ...  TRIVIAL
+r = [1, 1, 3], I = [0, 1] ...  TRIVIAL
+r = [1, 1, 1, 2], I = [3] ...  CO-TRIVIAL
+r = [1, 2, 2], I = [1] ...  todo
+r = [2, 3], I = [0] ...  TRIVIAL
+r = [1, 1, 1, 1, 1], I = [0, 1, 2] ...  TRIVIAL
+r = [1, 1, 1, 2], I = [0, 1, 2] ...  TRIVIAL
+r = [1, 1, 1, 2], I = [0, 3] ...  todo
+r = [1, 2, 2], I = [0, 1] ...  TRIVIAL
+r = [1, 1, 3], I = [2] ...  CO-TRIVIAL
+r = [2, 3], I = [1] ...  CO-TRIVIAL
+r = [1, 1, 1, 1, 1], I = [0, 1, 2, 3] ...  TRIVIAL
+r = [1, 1, 1, 2], I = [0, 1, 3] ...  todo
+r = [1, 2, 2], I = [1, 2] ...  CO-TRIVIAL
+r = [1, 1, 3], I = [0, 2] ...  todo
+r = [1, 4], I = [1] ...  CO-TRIVIAL
+r = [1, 1, 1, 1, 1], I = [0, 1, 2, 3, 4] ...  TRIVIAL
+r = [1, 1, 1, 2], I = [0, 1, 2, 3] ...  TRIVIAL
+r = [1, 2, 2], I = [0, 1, 2] ...  TRIVIAL
+r = [1, 1, 3], I = [0, 1, 2] ...  TRIVIAL
+r = [2, 3], I = [0, 1] ...  TRIVIAL
+r = [1, 4], I = [0, 1] ...  TRIVIAL
+r = [5], I = [0] ...  TRIVIAL
+r = [1, 2, 2], I = []                    #levels = TRIVIAL
+r = [1, 1, 1, 1, 1], I = [0, 1]          #levels = TRIVIAL
+r = [1, 2, 2], I = [0, 1, 2]             #levels = TRIVIAL
+r = [2, 3], I = [0]                      #levels = TRIVIAL
+r = [1, 4], I = [0]                      #levels = TRIVIAL
+r = [2, 3], I = []                       #levels = TRIVIAL
+r = [1, 1, 1, 1, 1], I = []              #levels = TRIVIAL
+r = [1, 2, 2], I = [1]                   #levels = 146
+r = [2, 3], I = [0, 1]                   #levels = TRIVIAL
+r = [5], I = [0]                         #levels = TRIVIAL
+r = [1, 1, 1, 2], I = [0, 1, 2, 3]       #levels = TRIVIAL
+r = [1, 1, 1, 2], I = [0, 1, 2]          #levels = TRIVIAL
+r = [1, 1, 1, 2], I = [0]                #levels = TRIVIAL
+r = [1, 2, 2], I = [1, 2]                #levels = CO-TRIVIAL
+r = [1, 1, 3], I = [0, 2]                #levels = 130
+r = [1, 1, 1, 1, 1], I = [0]             #levels = TRIVIAL
+r = [1, 1, 1, 2], I = [0, 3]             #levels = 2124
+r = [1, 4], I = []                       #levels = TRIVIAL
+r = [1, 1, 1, 2], I = [0, 1]             #levels = TRIVIAL
+r = [2, 3], I = [1]                      #levels = CO-TRIVIAL
+r = [1, 4], I = [0, 1]                   #levels = TRIVIAL
+r = [1, 1, 3], I = []                    #levels = TRIVIAL
+r = [1, 2, 2], I = [0, 1]                #levels = TRIVIAL
+r = [1, 4], I = [1]                      #levels = CO-TRIVIAL
+r = [1, 1, 3], I = [0, 1, 2]             #levels = TRIVIAL
+r = [1, 1, 3], I = [0]                   #levels = TRIVIAL
+r = [1, 1, 1, 2], I = []                 #levels = TRIVIAL
+r = [1, 1, 3], I = [2]                   #levels = CO-TRIVIAL
+r = [1, 1, 1, 1, 1], I = [0, 1, 2]       #levels = TRIVIAL
+r = [1, 1, 3], I = [0, 1]                #levels = TRIVIAL
+r = [5], I = []                          #levels = TRIVIAL
+r = [1, 1, 1, 2], I = [3]                #levels = CO-TRIVIAL
+r = [1, 1, 1, 1, 1], I = [0, 1, 2, 3]    #levels = TRIVIAL
+r = [1, 1, 1, 2], I = [0, 1, 3]          #levels = 2784
+r = [1, 2, 2], I = [0]                   #levels = TRIVIAL
+r = [1, 1, 1, 1, 1], I = [0, 1, 2, 3, 4] #levels = TRIVIAL
+Count = 5184
+sage: exit
+Exiting Sage (CPU time 0m0.12s, Wall time 0m27.94s).
+[23:56:12] jonesbe@MacBookPro ~> exit
+exit

@@ -1,0 +1,846 @@
+d320-606451:latest bjones$ ./sage
+----------------------------------------------------------------------
+| SAGE Version 3.0.6, Release Date: 2008-07-30                       |
+| Type notebook() for the GUI, and license() for information.        |
+----------------------------------------------------------------------
+
+logsage: log_text()
+Now logging to /Users/bjones/.sage/log/log-2008-08-08-161250/sagelog.txt
+Text Logger
+sage: 2+1
+3
+sage: 2+2
+4
+sage: attach "/User
+/User Guides And Information  /Users                        
+sage: attach "/Users/bjones/sage_code/
+/Users/bjones/sage_code/count_partitions.py                 /Users/bjones/sage_code/set_diff.py
+/Users/bjones/sage_code/csm                                 /Users/bjones/sage_code/singular_compute_normalization.txt
+/Users/bjones/sage_code/notebook                            /Users/bjones/sage_code/weyl_characters_A2.py
+/Users/bjones/sage_code/partitions.sws                      /Users/bjones/sage_code/weyl_characters_A2.py~
+/Users/bjones/sage_code/plotting.sws                        
+sage: attach "/Users/bjones/sage_code/csm/AM
+/Users/bjones/sage_code/csm/AM_formula.py   /Users/bjones/sage_code/csm/AM_formula.py~
+sage: attach "/Users/bjones/sage_code/csm/AM_formula.py"
+tpart = [3, 3, 3] upart =---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+
+/Users/bjones/sage_code/csm/AM_formula.py in <module>()
+     37 
+     38 for tpart in UPARTS:
+---> 39     print "tpart =", tpart, "upart =", upart
+     40     for upart in UPARTS:
+     41         f=s
+
+NameError: name 'upart' is not defined
+WARNING: Failure executing file: </Users/bjones/sage_code/csm/AM_formula.py>
+
+sage: 
+tpart = [3, 3, 3] upart = [3, 3, 3]
+coeff = 1
+tpart = [3, 3, 3] upart = [3, 3, 2]
+coeff = 5
+tpart = [3, 3, 3] upart = [3, 2, 2]
+coeff = 12
+tpart = [3, 3, 3] upart = [3, 3, 1]
+coeff = 12
+tpart = [3, 3, 3] upart = [2, 2, 2]
+coeff = 20
+tpart = [3, 3, 3] upart = [3, 2, 1]
+coeff = 34
+tpart = [3, 3, 3] upart = [2, 2, 1]
+coeff = 54
+tpart = [3, 3, 3] upart = [3, 1, 1]
+coeff = 31
+tpart = [3, 3, 3] upart = [2, 1, 1]
+coeff = 57
+tpart = [3, 3, 3] upart = [1, 1, 1]
+coeff = 27
+tpart = [3, 3, 3] upart = [3, 3, 0]
+coeff = 20
+tpart = [3, 3, 3] upart = [3, 2, 0]
+coeff = 54
+tpart = [3, 3, 3] upart = [2, 2, 0]
+coeff = 66
+tpart = [3, 3, 3] upart = [3, 1, 0]
+coeff = 57
+tpart = [3, 3, 3] upart = [2, 1, 0]
+coeff = 75
+tpart = [3, 3, 3] upart = [1, 1, 0]
+coeff = 27
+tpart = [3, 3, 3] upart = [3, 0, 0]
+coeff = 27
+tpart = [3, 3, 3] upart = [2, 0, 0]
+coeff = 27
+tpart = [3, 3, 3] upart = [1, 0, 0]
+coeff = 9
+tpart = [3, 3, 3] upart = [0, 0, 0]
+coeff = 1
+tpart = [3, 3, 2] upart = [3, 3, 3]
+coeff = 0
+tpart = [3, 3, 2] upart = [3, 3, 2]
+coeff = 1
+tpart = [3, 3, 2] upart = [3, 2, 2]
+coeff = 4
+tpart = [3, 3, 2] upart = [3, 3, 1]
+coeff = 4
+tpart = [3, 3, 2] upart = [2, 2, 2]
+coeff = 8
+tpart = [3, 3, 2] upart = [3, 2, 1]
+coeff = 15
+tpart = [3, 3, 2] upart = [2, 2, 1]
+coeff = 27
+tpart = [3, 3, 2] upart = [3, 1, 1]
+coeff = 17
+tpart = [3, 3, 2] upart = [2, 1, 1]
+coeff = 34
+tpart = [3, 3, 2] upart = [1, 1, 1]
+coeff = 18
+tpart = [3, 3, 2] upart = [3, 3, 0]
+coeff = 8
+tpart = [3, 3, 2] upart = [3, 2, 0]
+coeff = 27
+tpart = [3, 3, 2] upart = [2, 2, 0]
+coeff = 39
+tpart = [3, 3, 2] upart = [3, 1, 0]
+coeff = 34
+tpart = [3, 3, 2] upart = [2, 1, 0]
+coeff = 51
+tpart = [3, 3, 2] upart = [1, 1, 0]
+coeff = 21
+tpart = [3, 3, 2] upart = [3, 0, 0]
+coeff = 18
+tpart = [3, 3, 2] upart = [2, 0, 0]
+coeff = 21
+tpart = [3, 3, 2] upart = [1, 0, 0]
+coeff = 8
+tpart = [3, 3, 2] upart = [0, 0, 0]
+Maxima crashed -- automatically restarting.
+coeff = 0
+tpart = [3, 2, 2] upart = [3, 3, 3]
+coeff = 0
+tpart = [3, 2, 2] upart = [3, 3, 2]
+coeff = 0
+tpart = [3, 2, 2] upart = [3, 2, 2]
+coeff = 1
+tpart = [3, 2, 2] upart = [3, 3, 1]
+coeff = 0
+tpart = [3, 2, 2] upart = [2, 2, 2]
+coeff = 3
+tpart = [3, 2, 2] upart = [3, 2, 1]
+coeff = 4
+tpart = [3, 2, 2] upart = [2, 2, 1]
+coeff = 11
+tpart = [3, 2, 2] upart = [3, 1, 1]
+coeff = 7
+tpart = [3, 2, 2] upart = [2, 1, 1]
+coeff = 18
+tpart = [3, 2, 2] upart = [1, 1, 1]
+coeff = 12
+tpart = [3, 2, 2] upart = [3, 3, 0]
+coeff = 0
+tpart = [3, 2, 2] upart = [3, 2, 0]
+coeff = 8
+tpart = [3, 2, 2] upart = [2, 2, 0]
+coeff = 19
+tpart = [3, 2, 2] upart = [3, 1, 0]
+coeff = 15
+tpart = [3, 2, 2] upart = [2, 1, 0]
+coeff = 31
+tpart = [3, 2, 2] upart = [1, 1, 0]
+coeff = 16
+tpart = [3, 2, 2] upart = [3, 0, 0]
+coeff = 9
+tpart = [3, 2, 2] upart = [2, 0, 0]
+coeff = 15
+tpart = [3, 2, 2] upart = [1, 0, 0]
+coeff = 7
+tpart = [3, 2, 2] upart = [0, 0, 0]
+coeff = 1
+tpart = [3, 3, 1] upart = [3, 3, 3]
+coeff = 0
+tpart = [3, 3, 1] upart = [3, 3, 2]
+coeff = 0
+tpart = [3, 3, 1] upart = [3, 2, 2]
+coeff = 0
+tpart = [3, 3, 1] upart = [3, 3, 1]
+coeff = 1
+tpart = [3, 3, 1] upart = [2, 2, 2]
+coeff = 0
+tpart = [3, 3, 1] upart = [3, 2, 1]
+coeff = 4
+tpart = [3, 3, 1] upart = [2, 2, 1]
+coeff = 8
+tpart = [3, 3, 1] upart = [3, 1, 1]
+coeff = 7
+tpart = [3, 3, 1] upart = [2, 1, 1]
+coeff = 15
+tpart = [3, 3, 1] upart = [1, 1, 1]
+coeff = 9
+tpart = [3, 3, 1] upart = [3, 3, 0]
+coeff = 3
+tpart = [3, 3, 1] upart = [3, 2, 0]
+coeff = 11
+tpart = [3, 3, 1] upart = [2, 2, 0]
+coeff = 19
+tpart = [3, 3, 1] upart = [3, 1, 0]
+coeff = 18
+tpart = [3, 3, 1] upart = [2, 1, 0]
+coeff = 31
+tpart = [3, 3, 1] upart = [1, 1, 0]
+coeff = 15
+tpart = [3, 3, 1] upart = [3, 0, 0]
+coeff = 12
+tpart = [3, 3, 1] upart = [2, 0, 0]
+Maxima crashed -- automatically restarting.
+coeff = 0
+tpart = [3, 3, 1] upart = [1, 0, 0]
+coeff = 7
+tpart = [3, 3, 1] upart = [0, 0, 0]
+coeff = 1
+tpart = [2, 2, 2] upart = [3, 3, 3]
+coeff = 0
+tpart = [2, 2, 2] upart = [3, 3, 2]
+coeff = 0
+tpart = [2, 2, 2] upart = [3, 2, 2]
+coeff = 0
+tpart = [2, 2, 2] upart = [3, 3, 1]
+coeff = 0
+tpart = [2, 2, 2] upart = [2, 2, 2]
+coeff = 1
+tpart = [2, 2, 2] upart = [3, 2, 1]
+coeff = 0
+tpart = [2, 2, 2] upart = [2, 2, 1]
+coeff = 4
+tpart = [2, 2, 2] upart = [3, 1, 1]
+coeff = 0
+tpart = [2, 2, 2] upart = [2, 1, 1]
+coeff = 7
+tpart = [2, 2, 2] upart = [1, 1, 1]
+coeff = 8
+tpart = [2, 2, 2] upart = [3, 3, 0]
+coeff = 0
+tpart = [2, 2, 2] upart = [3, 2, 0]
+coeff = 0
+tpart = [2, 2, 2] upart = [2, 2, 0]
+coeff = 8
+tpart = [2, 2, 2] upart = [3, 1, 0]
+coeff = 0
+tpart = [2, 2, 2] upart = [2, 1, 0]
+coeff = 15
+tpart = [2, 2, 2] upart = [1, 1, 0]
+coeff = 12
+tpart = [2, 2, 2] upart = [3, 0, 0]
+coeff = 0
+tpart = [2, 2, 2] upart = [2, 0, 0]
+coeff = 9
+tpart = [2, 2, 2] upart = [1, 0, 0]
+coeff = 6
+tpart = [2, 2, 2] upart = [0, 0, 0]
+coeff = 1
+tpart = [3, 2, 1] upart = [3, 3, 3]
+coeff = 0
+tpart = [3, 2, 1] upart = [3, 3, 2]
+coeff = 0
+tpart = [3, 2, 1] upart = [3, 2, 2]
+coeff = 0
+tpart = [3, 2, 1] upart = [3, 3, 1]
+coeff = 0
+tpart = [3, 2, 1] upart = [2, 2, 2]
+coeff = 0
+tpart = [3, 2, 1] upart = [3, 2, 1]
+coeff = 1
+tpart = [3, 2, 1] upart = [2, 2, 1]
+coeff = 3
+tpart = [3, 2, 1] upart = [3, 1, 1]
+coeff = 3
+tpart = [3, 2, 1] upart = [2, 1, 1]
+coeff = 8
+tpart = [3, 2, 1] upart = [1, 1, 1]
+coeff = 6
+tpart = [3, 2, 1] upart = [3, 3, 0]
+coeff = 0
+tpart = [3, 2, 1] upart = [3, 2, 0]
+coeff = 3
+tpart = [3, 2, 1] upart = [2, 2, 0]
+coeff = 8
+tpart = [3, 2, 1] upart = [3, 1, 0]
+coeff = 8
+tpart = [3, 2, 1] upart = [2, 1, 0]
+coeff = 18
+tpart = [3, 2, 1] upart = [1, 1, 0]
+coeff = 11
+tpart = [3, 2, 1] upart = [3, 0, 0]
+coeff = 6
+tpart = [3, 2, 1] upart = [2, 0, 0]
+coeff = 11
+tpart = [3, 2, 1] upart = [1, 0, 0]
+coeff = 6
+tpart = [3, 2, 1] upart = [0, 0, 0]
+coeff = 1
+tpart = [2, 2, 1] upart = [3, 3, 3]
+coeff = 0
+tpart = [2, 2, 1] upart = [3, 3, 2]
+coeff = 0
+tpart = [2, 2, 1] upart = [3, 2, 2]
+coeff = 0
+tpart = [2, 2, 1] upart = [3, 3, 1]
+coeff = 0
+tpart = [2, 2, 1] upart = [2, 2, 2]
+coeff = 0
+tpart = [2, 2, 1] upart = [3, 2, 1]
+coeff = 0
+tpart = [2, 2, 1] upart = [2, 2, 1]
+coeff = 1
+tpart = [2, 2, 1] upart = [3, 1, 1]
+coeff = 0
+tpart = [2, 2, 1] upart = [2, 1, 1]
+coeff = 3
+tpart = [2, 2, 1] upart = [1, 1, 1]
+Maxima crashed -- automatically restarting.
+coeff = \mbox{sage}_{5352}
+tpart = [2, 2, 1] upart = [3, 3, 0]
+coeff = 0
+tpart = [2, 2, 1] upart = [3, 2, 0]
+coeff = 0
+tpart = [2, 2, 1] upart = [2, 2, 0]
+coeff = 3
+tpart = [2, 2, 1] upart = [3, 1, 0]
+coeff = 0
+tpart = [2, 2, 1] upart = [2, 1, 0]
+coeff = 8
+tpart = [2, 2, 1] upart = [1, 1, 0]
+coeff = 8
+tpart = [2, 2, 1] upart = [3, 0, 0]
+coeff = 0
+tpart = [2, 2, 1] upart = [2, 0, 0]
+coeff = 6
+tpart = [2, 2, 1] upart = [1, 0, 0]
+coeff = 5
+tpart = [2, 2, 1] upart = [0, 0, 0]
+coeff = 1
+tpart = [3, 1, 1] upart = [3, 3, 3]
+coeff = 0
+tpart = [3, 1, 1] upart = [3, 3, 2]
+coeff = 0
+tpart = [3, 1, 1] upart = [3, 2, 2]
+coeff = 0
+tpart = [3, 1, 1] upart = [3, 3, 1]
+coeff = 0
+tpart = [3, 1, 1] upart = [2, 2, 2]
+coeff = 0
+tpart = [3, 1, 1] upart = [3, 2, 1]
+coeff = 0
+tpart = [3, 1, 1] upart = [2, 2, 1]
+coeff = 0
+tpart = [3, 1, 1] upart = [3, 1, 1]
+coeff = 1
+tpart = [3, 1, 1] upart = [2, 1, 1]
+coeff = 3
+tpart = [3, 1, 1] upart = [1, 1, 1]
+coeff = 3
+tpart = [3, 1, 1] upart = [3, 3, 0]
+coeff = 0
+tpart = [3, 1, 1] upart = [3, 2, 0]
+coeff = 0
+tpart = [3, 1, 1] upart = [2, 2, 0]
+coeff = 0
+tpart = [3, 1, 1] upart = [3, 1, 0]
+coeff = 3
+tpart = [3, 1, 1] upart = [2, 1, 0]
+coeff = 8
+tpart = [3, 1, 1] upart = [1, 1, 0]
+coeff = 7
+tpart = [3, 1, 1] upart = [3, 0, 0]
+coeff = 3
+tpart = [3, 1, 1] upart = [2, 0, 0]
+coeff = 7
+tpart = [3, 1, 1] upart = [1, 0, 0]
+coeff = 5
+tpart = [3, 1, 1] upart = [0, 0, 0]
+coeff = 1
+tpart = [2, 1, 1] upart = [3, 3, 3]
+coeff = 0
+tpart = [2, 1, 1] upart = [3, 3, 2]
+coeff = 0
+tpart = [2, 1, 1] upart = [3, 2, 2]
+coeff = 0
+tpart = [2, 1, 1] upart = [3, 3, 1]
+coeff = 0
+tpart = [2, 1, 1] upart = [2, 2, 2]
+coeff = 0
+tpart = [2, 1, 1] upart = [3, 2, 1]
+coeff = 0
+tpart = [2, 1, 1] upart = [2, 2, 1]
+coeff = 0
+tpart = [2, 1, 1] upart = [3, 1, 1]
+coeff = 0
+tpart = [2, 1, 1] upart = [2, 1, 1]
+coeff = 1
+tpart = [2, 1, 1] upart = [1, 1, 1]
+coeff = 2
+tpart = [2, 1, 1] upart = [3, 3, 0]
+coeff = 0
+tpart = [2, 1, 1] upart = [3, 2, 0]
+coeff = 0
+tpart = [2, 1, 1] upart = [2, 2, 0]
+coeff = 0
+tpart = [2, 1, 1] upart = [3, 1, 0]
+coeff = 0
+tpart = [2, 1, 1] upart = [2, 1, 0]
+coeff = 3
+tpart = [2, 1, 1] upart = [1, 1, 0]
+coeff = 5
+tpart = [2, 1, 1] upart = [3, 0, 0]
+coeff = 0
+tpart = [2, 1, 1] upart = [2, 0, 0]
+coeff = 3
+tpart = [2, 1, 1] upart = [1, 0, 0]
+coeff = 4
+tpart = [2, 1, 1] upart = [0, 0, 0]
+coeff = 1
+tpart = [1, 1, 1] upart = [3, 3, 3]
+coeff = 0
+tpart = [1, 1, 1] upart = [3, 3, 2]
+coeff = 0
+tpart = [1, 1, 1] upart = [3, 2, 2]
+coeff = 0
+tpart = [1, 1, 1] upart = [3, 3, 1]
+coeff = 0
+tpart = [1, 1, 1] upart = [2, 2, 2]
+coeff = 0
+tpart = [1, 1, 1] upart = [3, 2, 1]
+coeff = 0
+tpart = [1, 1, 1] upart = [2, 2, 1]
+coeff = 0
+tpart = [1, 1, 1] upart = [3, 1, 1]
+coeff = 0
+tpart = [1, 1, 1] upart = [2, 1, 1]
+coeff = 0
+tpart = [1, 1, 1] upart = [1, 1, 1]
+coeff = 1
+tpart = [1, 1, 1] upart = [3, 3, 0]
+coeff = 0
+tpart = [1, 1, 1] upart = [3, 2, 0]
+coeff = 0
+tpart = [1, 1, 1] upart = [2, 2, 0]
+coeff = 0
+tpart = [1, 1, 1] upart = [3, 1, 0]
+coeff = 0
+tpart = [1, 1, 1] upart = [2, 1, 0]
+coeff = 0
+tpart = [1, 1, 1] upart = [1, 1, 0]
+coeff = 3
+tpart = [1, 1, 1] upart = [3, 0, 0]
+coeff = 0
+tpart = [1, 1, 1] upart = [2, 0, 0]
+coeff = 0
+tpart = [1, 1, 1] upart = [1, 0, 0]
+coeff = 3
+tpart = [1, 1, 1] upart = [0, 0, 0]
+coeff = 1
+tpart = [3, 3, 0] upart = [3, 3, 3]
+coeff = 0
+tpart = [3, 3, 0] upart = [3, 3, 2]
+coeff = 0
+tpart = [3, 3, 0] upart = [3, 2, 2]
+coeff = 0
+tpart = [3, 3, 0] upart = [3, 3, 1]
+coeff = 0
+tpart = [3, 3, 0] upart = [2, 2, 2]
+coeff = 0
+tpart = [3, 3, 0] upart = [3, 2, 1]
+coeff = 0
+tpart = [3, 3, 0] upart = [2, 2, 1]
+coeff = 0
+tpart = [3, 3, 0] upart = [3, 1, 1]
+coeff = 0
+tpart = [3, 3, 0] upart = [2, 1, 1]
+coeff = 0
+tpart = [3, 3, 0] upart = [1, 1, 1]
+coeff = 0
+tpart = [3, 3, 0] upart = [3, 3, 0]
+coeff = 1
+tpart = [3, 3, 0] upart = [3, 2, 0]
+coeff = 4
+tpart = [3, 3, 0] upart = [2, 2, 0]
+coeff = 8
+tpart = [3, 3, 0] upart = [3, 1, 0]
+coeff = 7
+tpart = [3, 3, 0] upart = [2, 1, 0]
+coeff = 15
+tpart = [3, 3, 0] upart = [1, 1, 0]
+coeff = 9
+tpart = [3, 3, 0] upart = [3, 0, 0]
+coeff = 8
+tpart = [3, 3, 0] upart = [2, 0, 0]
+coeff = 12
+tpart = [3, 3, 0] upart = [1, 0, 0]
+coeff = 6
+tpart = [3, 3, 0] upart = [0, 0, 0]
+coeff = 1
+tpart = [3, 2, 0] upart = [3, 3, 3]
+coeff = 0
+tpart = [3, 2, 0] upart = [3, 3, 2]
+coeff = 0
+tpart = [3, 2, 0] upart = [3, 2, 2]
+coeff = 0
+tpart = [3, 2, 0] upart = [3, 3, 1]
+coeff = 0
+tpart = [3, 2, 0] upart = [2, 2, 2]
+coeff = 0
+tpart = [3, 2, 0] upart = [3, 2, 1]
+coeff = 0
+tpart = [3, 2, 0] upart = [2, 2, 1]
+coeff = 0
+tpart = [3, 2, 0] upart = [3, 1, 1]
+coeff = 0
+tpart = [3, 2, 0] upart = [2, 1, 1]
+coeff = 0
+tpart = [3, 2, 0] upart = [1, 1, 1]
+coeff = 0
+tpart = [3, 2, 0] upart = [3, 3, 0]
+coeff = 0
+tpart = [3, 2, 0] upart = [3, 2, 0]
+coeff = 1
+tpart = [3, 2, 0] upart = [2, 2, 0]
+coeff = 3
+tpart = [3, 2, 0] upart = [3, 1, 0]
+coeff = 3
+tpart = [3, 2, 0] upart = [2, 1, 0]
+coeff = 8
+tpart = [3, 2, 0] upart = [1, 1, 0]
+coeff = 6
+tpart = [3, 2, 0] upart = [3, 0, 0]
+coeff = 4
+tpart = [3, 2, 0] upart = [2, 0, 0]
+coeff = 8
+tpart = [3, 2, 0] upart = [1, 0, 0]
+coeff = 5
+tpart = [3, 2, 0] upart = [0, 0, 0]
+coeff = 1
+tpart = [2, 2, 0] upart = [3, 3, 3]
+coeff = 0
+tpart = [2, 2, 0] upart = [3, 3, 2]
+coeff = 0
+tpart = [2, 2, 0] upart = [3, 2, 2]
+coeff = 0
+tpart = [2, 2, 0] upart = [3, 3, 1]
+coeff = 0
+tpart = [2, 2, 0] upart = [2, 2, 2]
+Maxima crashed -- automatically restarting.
+coeff = 0
+tpart = [2, 2, 0] upart = [3, 2, 1]
+coeff = 0
+tpart = [2, 2, 0] upart = [2, 2, 1]
+coeff = 0
+tpart = [2, 2, 0] upart = [3, 1, 1]
+coeff = 0
+tpart = [2, 2, 0] upart = [2, 1, 1]
+coeff = 0
+tpart = [2, 2, 0] upart = [1, 1, 1]
+coeff = 0
+tpart = [2, 2, 0] upart = [3, 3, 0]
+coeff = 0
+tpart = [2, 2, 0] upart = [3, 2, 0]
+coeff = 0
+tpart = [2, 2, 0] upart = [2, 2, 0]
+coeff = 1
+tpart = [2, 2, 0] upart = [3, 1, 0]
+coeff = 0
+tpart = [2, 2, 0] upart = [2, 1, 0]
+coeff = 3
+tpart = [2, 2, 0] upart = [1, 1, 0]
+coeff = 4
+tpart = [2, 2, 0] upart = [3, 0, 0]
+coeff = 0
+tpart = [2, 2, 0] upart = [2, 0, 0]
+coeff = 4
+tpart = [2, 2, 0] upart = [1, 0, 0]
+coeff = 4
+tpart = [2, 2, 0] upart = [0, 0, 0]
+coeff = 1
+tpart = [3, 1, 0] upart = [3, 3, 3]
+coeff = 0
+tpart = [3, 1, 0] upart = [3, 3, 2]
+coeff = 0
+tpart = [3, 1, 0] upart = [3, 2, 2]
+coeff = 0
+tpart = [3, 1, 0] upart = [3, 3, 1]
+coeff = 0
+tpart = [3, 1, 0] upart = [2, 2, 2]
+coeff = 0
+tpart = [3, 1, 0] upart = [3, 2, 1]
+coeff = 0
+tpart = [3, 1, 0] upart = [2, 2, 1]
+coeff = 0
+tpart = [3, 1, 0] upart = [3, 1, 1]
+coeff = 0
+tpart = [3, 1, 0] upart = [2, 1, 1]
+coeff = 0
+tpart = [3, 1, 0] upart = [1, 1, 1]
+coeff = 0
+tpart = [3, 1, 0] upart = [3, 3, 0]
+coeff = 0
+tpart = [3, 1, 0] upart = [3, 2, 0]
+coeff = 0
+tpart = [3, 1, 0] upart = [2, 2, 0]
+coeff = 0
+tpart = [3, 1, 0] upart = [3, 1, 0]
+coeff = 1
+tpart = [3, 1, 0] upart = [2, 1, 0]
+coeff = 3
+tpart = [3, 1, 0] upart = [1, 1, 0]
+coeff = 3
+tpart = [3, 1, 0] upart = [3, 0, 0]
+coeff = 2
+tpart = [3, 1, 0] upart = [2, 0, 0]
+coeff = 5
+tpart = [3, 1, 0] upart = [1, 0, 0]
+coeff = 4
+tpart = [3, 1, 0] upart = [0, 0, 0]
+coeff = 1
+tpart = [2, 1, 0] upart = [3, 3, 3]
+coeff = 0
+tpart = [2, 1, 0] upart = [3, 3, 2]
+coeff = 0
+tpart = [2, 1, 0] upart = [3, 2, 2]
+coeff = 0
+tpart = [2, 1, 0] upart = [3, 3, 1]
+coeff = 0
+tpart = [2, 1, 0] upart = [2, 2, 2]
+coeff = 0
+tpart = [2, 1, 0] upart = [3, 2, 1]
+coeff = 0
+tpart = [2, 1, 0] upart = [2, 2, 1]
+coeff = 0
+tpart = [2, 1, 0] upart = [3, 1, 1]
+coeff = 0
+tpart = [2, 1, 0] upart = [2, 1, 1]
+coeff = 0
+tpart = [2, 1, 0] upart = [1, 1, 1]
+coeff = 0
+tpart = [2, 1, 0] upart = [3, 3, 0]
+coeff = 0
+tpart = [2, 1, 0] upart = [3, 2, 0]
+coeff = 0
+tpart = [2, 1, 0] upart = [2, 2, 0]
+coeff = 0
+tpart = [2, 1, 0] upart = [3, 1, 0]
+coeff = 0
+tpart = [2, 1, 0] upart = [2, 1, 0]
+coeff = 1
+tpart = [2, 1, 0] upart = [1, 1, 0]
+coeff = 2
+tpart = [2, 1, 0] upart = [3, 0, 0]
+coeff = 0
+tpart = [2, 1, 0] upart = [2, 0, 0]
+coeff = 2
+tpart = [2, 1, 0] upart = [1, 0, 0]
+coeff = 3
+tpart = [2, 1, 0] upart = [0, 0, 0]
+coeff = 1
+tpart = [1, 1, 0] upart = [3, 3, 3]
+coeff = 0
+tpart = [1, 1, 0] upart = [3, 3, 2]
+coeff = 0
+tpart = [1, 1, 0] upart = [3, 2, 2]
+coeff = 0
+tpart = [1, 1, 0] upart = [3, 3, 1]
+coeff = 0
+tpart = [1, 1, 0] upart = [2, 2, 2]
+coeff = 0
+tpart = [1, 1, 0] upart = [3, 2, 1]
+coeff = 0
+tpart = [1, 1, 0] upart = [2, 2, 1]
+coeff = 0
+tpart = [1, 1, 0] upart = [3, 1, 1]
+coeff = 0
+tpart = [1, 1, 0] upart = [2, 1, 1]
+coeff = 0
+tpart = [1, 1, 0] upart = [1, 1, 1]
+coeff = 0
+tpart = [1, 1, 0] upart = [3, 3, 0]
+coeff = 0
+tpart = [1, 1, 0] upart = [3, 2, 0]
+coeff = 0
+tpart = [1, 1, 0] upart = [2, 2, 0]
+coeff = 0
+tpart = [1, 1, 0] upart = [3, 1, 0]
+coeff = 0
+tpart = [1, 1, 0] upart = [2, 1, 0]
+coeff = 0
+tpart = [1, 1, 0] upart = [1, 1, 0]
+coeff = 1
+tpart = [1, 1, 0] upart = [3, 0, 0]
+coeff = 0
+tpart = [1, 1, 0] upart = [2, 0, 0]
+coeff = 0
+tpart = [1, 1, 0] upart = [1, 0, 0]
+coeff = 2
+tpart = [1, 1, 0] upart = [0, 0, 0]
+coeff = 1
+tpart = [3, 0, 0] upart = [3, 3, 3]
+coeff = 0
+tpart = [3, 0, 0] upart = [3, 3, 2]
+coeff = 0
+tpart = [3, 0, 0] upart = [3, 2, 2]
+coeff = 0
+tpart = [3, 0, 0] upart = [3, 3, 1]
+coeff = 0
+tpart = [3, 0, 0] upart = [2, 2, 2]
+coeff = 0
+tpart = [3, 0, 0] upart = [3, 2, 1]
+coeff = 0
+tpart = [3, 0, 0] upart = [2, 2, 1]
+coeff = 0
+tpart = [3, 0, 0] upart = [3, 1, 1]
+coeff = 0
+tpart = [3, 0, 0] upart = [2, 1, 1]
+coeff = 0
+tpart = [3, 0, 0] upart = [1, 1, 1]
+coeff = 0
+tpart = [3, 0, 0] upart = [3, 3, 0]
+Maxima crashed -- automatically restarting.
+coeff = 0
+tpart = [3, 0, 0] upart = [3, 2, 0]
+coeff = 0
+tpart = [3, 0, 0] upart = [2, 2, 0]
+coeff = 0
+tpart = [3, 0, 0] upart = [3, 1, 0]
+coeff = 0
+tpart = [3, 0, 0] upart = [2, 1, 0]
+coeff = 0
+tpart = [3, 0, 0] upart = [1, 1, 0]
+coeff = 0
+tpart = [3, 0, 0] upart = [3, 0, 0]
+coeff = 1
+tpart = [3, 0, 0] upart = [2, 0, 0]
+coeff = 3
+tpart = [3, 0, 0] upart = [1, 0, 0]
+coeff = 3
+tpart = [3, 0, 0] upart = [0, 0, 0]
+coeff = 1
+tpart = [2, 0, 0] upart = [3, 3, 3]
+coeff = 0
+tpart = [2, 0, 0] upart = [3, 3, 2]
+coeff = 0
+tpart = [2, 0, 0] upart = [3, 2, 2]
+coeff = 0
+tpart = [2, 0, 0] upart = [3, 3, 1]
+coeff = 0
+tpart = [2, 0, 0] upart = [2, 2, 2]
+coeff = 0
+tpart = [2, 0, 0] upart = [3, 2, 1]
+coeff = 0
+tpart = [2, 0, 0] upart = [2, 2, 1]
+coeff = 0
+tpart = [2, 0, 0] upart = [3, 1, 1]
+coeff = 0
+tpart = [2, 0, 0] upart = [2, 1, 1]
+coeff = 0
+tpart = [2, 0, 0] upart = [1, 1, 1]
+coeff = 0
+tpart = [2, 0, 0] upart = [3, 3, 0]
+coeff = 0
+tpart = [2, 0, 0] upart = [3, 2, 0]
+coeff = 0
+tpart = [2, 0, 0] upart = [2, 2, 0]
+coeff = 0
+tpart = [2, 0, 0] upart = [3, 1, 0]
+coeff = 0
+tpart = [2, 0, 0] upart = [2, 1, 0]
+coeff = 0
+tpart = [2, 0, 0] upart = [1, 1, 0]
+coeff = 0
+tpart = [2, 0, 0] upart = [3, 0, 0]
+coeff = 0
+tpart = [2, 0, 0] upart = [2, 0, 0]
+coeff = 1
+tpart = [2, 0, 0] upart = [1, 0, 0]
+coeff = 2
+tpart = [2, 0, 0] upart = [0, 0, 0]
+coeff = 1
+tpart = [1, 0, 0] upart = [3, 3, 3]
+coeff = 0
+tpart = [1, 0, 0] upart = [3, 3, 2]
+coeff = 0
+tpart = [1, 0, 0] upart = [3, 2, 2]
+coeff = 0
+tpart = [1, 0, 0] upart = [3, 3, 1]
+coeff = 0
+tpart = [1, 0, 0] upart = [2, 2, 2]
+coeff = 0
+tpart = [1, 0, 0] upart = [3, 2, 1]
+coeff = 0
+tpart = [1, 0, 0] upart = [2, 2, 1]
+coeff = 0
+tpart = [1, 0, 0] upart = [3, 1, 1]
+coeff = 0
+tpart = [1, 0, 0] upart = [2, 1, 1]
+coeff = 0
+tpart = [1, 0, 0] upart = [1, 1, 1]
+coeff = 0
+tpart = [1, 0, 0] upart = [3, 3, 0]
+coeff = 0
+tpart = [1, 0, 0] upart = [3, 2, 0]
+coeff = 0
+tpart = [1, 0, 0] upart = [2, 2, 0]
+coeff = 0
+tpart = [1, 0, 0] upart = [3, 1, 0]
+coeff = 0
+tpart = [1, 0, 0] upart = [2, 1, 0]
+coeff = 0
+tpart = [1, 0, 0] upart = [1, 1, 0]
+coeff = 0
+tpart = [1, 0, 0] upart = [3, 0, 0]
+coeff = 0
+tpart = [1, 0, 0] upart = [2, 0, 0]
+coeff = 0
+tpart = [1, 0, 0] upart = [1, 0, 0]
+coeff = 1
+tpart = [1, 0, 0] upart = [0, 0, 0]
+coeff = 1
+tpart = [0, 0, 0] upart = [3, 3, 3]
+coeff = 0
+tpart = [0, 0, 0] upart = [3, 3, 2]
+coeff = 0
+tpart = [0, 0, 0] upart = [3, 2, 2]
+coeff = 0
+tpart = [0, 0, 0] upart = [3, 3, 1]
+coeff = 0
+tpart = [0, 0, 0] upart = [2, 2, 2]
+coeff = 0
+tpart = [0, 0, 0] upart = [3, 2, 1]
+coeff = 0
+tpart = [0, 0, 0] upart = [2, 2, 1]
+coeff = 0
+tpart = [0, 0, 0] upart = [3, 1, 1]
+coeff = 0
+tpart = [0, 0, 0] upart = [2, 1, 1]
+Maxima crashed -- automatically restarting.
+coeff = 0
+tpart = [0, 0, 0] upart = [1, 1, 1]
+coeff = 0
+tpart = [0, 0, 0] upart = [3, 3, 0]
+coeff = 0
+tpart = [0, 0, 0] upart = [3, 2, 0]
+coeff = 0
+tpart = [0, 0, 0] upart = [2, 2, 0]
+coeff = 0
+tpart = [0, 0, 0] upart = [3, 1, 0]
+coeff = 0
+tpart = [0, 0, 0] upart = [2, 1, 0]
+coeff = 0
+tpart = [0, 0, 0] upart = [1, 1, 0]
+coeff = 0
+tpart = [0, 0, 0] upart = [3, 0, 0]
+coeff = 0
+tpart = [0, 0, 0] upart = [2, 0, 0]
+coeff = 0
+tpart = [0, 0, 0] upart = [1, 0, 0]
+coeff = 0
+tpart = [0, 0, 0] upart = [0, 0, 0]
+coeff = 1
+sage: 
+sage: 
