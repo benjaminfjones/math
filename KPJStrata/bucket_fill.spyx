@@ -161,31 +161,31 @@ def subord_bipartitions_c( mu, nu, ep):
     return [ mup, nup, mum, num ]
 
 
-        
+
 cpdef int descent_position_c(L):
     cdef int i
     for i in range(len(L)-1):
         if L[i] < L[i+1]:
             return i
     return -1
-    
+
 cpdef int descent_position2_c(L,M):
     cdef int i
     for i in range(len(L)-1):
         if L[i] < L[i+1] or M[i] < M[i+1]:
             return i
     return -1
-    
+
 cpdef int zero_position2_c(L,M):
     cdef int i
     for i in range(len(L)):
         if L[i] == 0 and M[i] == 0:
             return i
     return -1
-    
+
 cpdef non_zero_c(int n):
     if n == 0:
         return False
     else:
         return True
-    
+

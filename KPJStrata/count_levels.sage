@@ -1,5 +1,5 @@
-import sys
-# for sys.stdout.flush()
+import sys         # for sys.stdout.flush()
+
 
 def levels(n):
     """
@@ -8,7 +8,7 @@ def levels(n):
     for (r,I) in quivers(n):
         for l in kpj_levels_gen(r,I):
             yield l
-            
+
 
 
 # need generator version of kpj_levels for n >= 7 
@@ -39,7 +39,7 @@ def levels(n):
 #                 C += count[s]
 #         print 'Count = {0}'.format(C)
 
-# 
+#
 # next two functions count levels in parallel by assigning the count
 # for each quiver to a separate process. This typically results in 
 # lots of processes at first, dying down to a few long running 
@@ -53,11 +53,11 @@ def count_levels_byquiver(q):
         - q - a quiver (r,I)
     OUTPUT:
         - the number of levels associated to (r,I)
-        
+
     EXAMPLES:
         sage: %timeit list(count_levels_byquiver([[[1, 1, 1, 1], [0, 1, 3]]]))
         5 loops, best of 3: 348 ms per loop
-        
+
     """
     r,I = (q[0], q[1])
     s = 0
@@ -96,7 +96,7 @@ def count_all_levels(n, pretty=False):
             if type(count[s]) != str:
                 C += count[s]
         print 'Count = {0}'.format(C)
-        
+
 # The next two functions count levels for each individual quiver
 # in parallel. This is done by a special version of `kpj_levels_gen`
 # which does the first (and largest) recursion level in parallel.
@@ -111,7 +111,7 @@ def count_kpj_levels_initial(*args):
         - r = list of integers
         - I = list of indicies in 0 ... len(r)-1
         - l = a partial `level` which is a list of len(r) bipartitions
-    
+
     Counts levels for the quiver (r,I) whose initial segment is l.
     """
     (r,I,l) = args
@@ -133,12 +133,12 @@ def data_generator(r,I,levels):
 def count_kpj_levels_parallel(r, I):
     """
     EXAMPLES:
-        
+
         ! WAY slower than count_levels_byquiver
-        
+
         sage: %timeit count_kpj_levels_parallel([1, 1, 1, 1], [0, 1, 3])
         5 loops, best of 3: 1.46 s per loop
-        
+
     """
     t = len(r)
     if t == 0:
@@ -146,10 +146,10 @@ def count_kpj_levels_parallel(r, I):
     else:
         count = 0
         levels = kpj_levels_gen( r[:t-1], filter(lambda i:i < t-1, I))
-        
+
         n = sum(r)
         data = data_generator(r,I,levels)
-        
+
         for X in count_kpj_levels_initial(data):
             count += X[1]
         return count
@@ -191,7 +191,7 @@ def count_all_levels2(n, pretty=False):
         if type(count[s]) != str:
             C += count[s]
     print 'Count = {0}'.format(C)
-        
+
 # output_N_7 = """
 # sage: count_levels(7, pretty=True)
 # r = [1, 1, 1, 1, 1, 1, 1], I = [] ...  TRIVIAL

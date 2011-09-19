@@ -114,8 +114,7 @@ def uniqify_levels(L):
         if not inR:
             R.append(l)
     return R
-        
-    
+
 def sum_partitions(mu, nu):
     """
     Returns the partition lam which is the sum of the partitions `mu` and `nu` 
@@ -130,7 +129,7 @@ def sum_partitions(mu, nu):
         lam = [ mu[i] + nu[i] for i in range(lm) ]
         lam.extend(nu[lm:])
     return lam
-    
+
 def bipartitionize( bp ):
     """
     Assumes bp is a pair of quasipartitions. The sum of its members need not be
