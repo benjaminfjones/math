@@ -32,7 +32,7 @@ title: Computational Mathematics Projects
 
 Each of the projects described above is hosted on
 [github.com](http://github.com) at the following location:
-[Math Projects Repository][math-repo]. Source code, logs, 
+[Math Projects Repository][mathrepo]. Source code, logs, 
 and worksheets can be downloaded either by cloning the git
 repository:
 
