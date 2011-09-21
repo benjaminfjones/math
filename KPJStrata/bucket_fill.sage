@@ -520,4 +520,3 @@ def kpj_levels_gen(r, I):
         for L in levels0:
             for w in compatible_bipartitions(L[t-1], n, not (t-1 in I)):
                 yield L + [w]
-# END of file
