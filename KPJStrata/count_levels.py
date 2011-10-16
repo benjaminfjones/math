@@ -1,4 +1,6 @@
-import sys         # for sys.stdout.flush()
+import sys
+from sage.all import *
+from bucket_fill import *
 
 
 def levels(n):
@@ -9,42 +11,6 @@ def levels(n):
         for l in kpj_levels_gen(r,I):
             yield l
 
-
-
-# need generator version of kpj_levels for n >= 7 
-# def count_levels(n, pretty=False):
-#     count = dict()
-#     for (r,I) in quivers(n):
-#         str_r_I = "r = %s, I = %s" % (r,I) 
-#         print '{0} ... '.format(str_r_I),
-#         if quiver_is_trivial(r,I):
-#             count[str_r_I] = 'TRIVIAL'
-#             print 'TRIVIAL'
-#         elif quiver_is_cotrivial(r,I):
-#             count[str_r_I] = 'CO-TRIVIAL'
-#             print 'CO-TRIVIAL'
-#         else:
-#             sys.stdout.flush()
-#             s = 0
-#             for l in kpj_levels_gen(r,I):
-#                 s += 1
-#             count[str_r_I] = s
-#             print s
-#     if pretty:
-#         width=max(map(len,count.keys()))
-#         C = 0
-#         for s in count:
-#             print '{0:<{width}} #levels = {1}'.format(s,count[s],width=width)
-#             if type(count[s]) != str:
-#                 C += count[s]
-#         print 'Count = {0}'.format(C)
-
-#
-# next two functions count levels in parallel by assigning the count
-# for each quiver to a separate process. This typically results in 
-# lots of processes at first, dying down to a few long running 
-# single processes that take the majority of the cpu time.
-#
 
 @parallel() # auto-detect # cpu's
 def count_levels_byquiver(q):
@@ -60,16 +26,16 @@ def count_levels_byquiver(q):
 
     """
     r,I = (q[0], q[1])
-    s = 0
+    s = Integer(0)
     for l in kpj_levels_gen(r,I):
-        s += 1
+        s += Integer(1)
     return s
 
 def count_all_levels(n, pretty=False):
     count = dict()
     todo = []
     for (r,I) in quivers(n):
-        str_r_I = "r = %s, I = %s" % (r,I) 
+        str_r_I = "r = %s, I = %s" % (r,I)
         print '{0} ... '.format(str_r_I),
         if quiver_is_trivial(r,I):
             count[str_r_I] = 'TRIVIAL'
@@ -79,7 +45,7 @@ def count_all_levels(n, pretty=False):
             print 'CO-TRIVIAL'
         else:
             print 'todo'
-            count[str_r_I] = 0
+            count[str_r_I] = Integer(0)
             todo.append([r,I])
     results = []
     # run kpj_levels in parallel for quivers in `todo`
@@ -90,12 +56,16 @@ def count_all_levels(n, pretty=False):
     # print nice table of results
     if pretty:
         width=max(map(len,count.keys()))
-        C = 0
+        C = Integer(0)
         for s in count:
             print '{0:<{width}} #levels = {1}'.format(s,count[s],width=width)
             if type(count[s]) != str:
                 C += count[s]
         print 'Count = {0}'.format(C)
+
+##
+## -- Parallel Level Enumeration --
+##
 
 # The next two functions count levels for each individual quiver
 # in parallel. This is done by a special version of `kpj_levels_gen`
@@ -103,7 +73,7 @@ def count_all_levels(n, pretty=False):
 # The result is a much better distribution of multiple processes over
 # the life of the computation.
 
-@parallel(2)
+@parallel()
 def count_kpj_levels_initial(*args):
     """
     INPUT:
@@ -117,18 +87,12 @@ def count_kpj_levels_initial(*args):
     (r,I,l) = args
     n = sum(r)
     t = len(r)
-    count = 0
+    count = Integer(0)
     for w in compatible_bipartitions(l[t-1], n, not (t-1 in I)):
-        count += 1
+        count += Integer(1)
     return count
 
-@parallel()
-def parallel_test(*args, **kwds):
-    return 'args = {0}'.format(args)
 
-def data_generator(r,I,levels):
-    for l in levels:
-        yield (r,I,l)
 
 def count_kpj_levels_parallel(r, I):
     """
@@ -144,21 +108,29 @@ def count_kpj_levels_parallel(r, I):
     if t == 0:
         return 0
     else:
-        count = 0
+        count = Integer(0)
         levels = kpj_levels_gen( r[:t-1], filter(lambda i:i < t-1, I))
 
         n = sum(r)
+        def data_generator(r,I,levels):
+            for l in levels:
+                yield (r,I,l)
+
         data = data_generator(r,I,levels)
 
         for X in count_kpj_levels_initial(data):
             count += X[1]
         return count
 
+# Notes:
+# This counting function works well up to n=6
+#
+
 def count_all_levels2(n, pretty=False):
     count = dict()
     todo = []
     for (r,I) in quivers(n):
-        str_r_I = "r = %s, I = %s" % (r,I) 
+        str_r_I = "r = %s, I = %s" % (r,I)
         print '{0} ... '.format(str_r_I),
         if quiver_is_trivial(r,I):
             count[str_r_I] = 'TRIVIAL'
@@ -168,27 +140,34 @@ def count_all_levels2(n, pretty=False):
             print 'CO-TRIVIAL'
         else:
             print 'todo'
-            count[str_r_I] = 0
+            count[str_r_I] = Integer(0)
             todo.append([r,I])
     results = []
     # run special `kpj_levels_parallel` for quivers in `todo`
     print '\n*** Counting Non-trivial Levels ***\n'
     number_todo = len(todo)
-    i = 0
+    i = Integer(0)
     for (r,I) in todo:
-        i += 1
+        i += Integer(1)
         str_r_I = "r = %s, I = %s" % (r,I)
         print '{0} ({1}/{2}) ... '.format(str_r_I, i, number_todo),
         sys.stdout.flush()
-        count[str_r_I] = count_kpj_levels_parallel(r,I)
+        count[str_r_I] = count_kpj_levels_parallel(r,I)  # potentially a long time
         print '{0}'.format(count[str_r_I])
     # print nice table of results
     print '\n*** TABLE: ***\n'
     width=max(map(len,count.keys()))
-    C = 0
+    C = Integer(0)
     for s in count:
         print '{0:<{width}} #levels = {1}'.format(s,count[s],width=width)
         if type(count[s]) != str:
             C += count[s]
     print 'Count = {0}'.format(C)
 
+
+#
+# - main module code -
+
+if __name__ == '__main__':
+    n = int(raw_input('Count levels n = '))
+    count_all_levels2(n, pretty=True)

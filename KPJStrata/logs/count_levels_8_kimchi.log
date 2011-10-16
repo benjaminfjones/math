@@ -1,0 +1,210 @@
+Script started on Tue 27 Sep 2011 11:29:56 PM CDT
+bael@kimchi:~/Dropbox/git/math/KPJStrata$ mysage -python count_levels.py
+Count levels n = 8
+r = [1, 1, 1, 1, 1, 1, 1, 1], I = [] ...  TRIVIAL
+r = [1, 1, 1, 1, 1, 1, 2], I = [] ...  TRIVIAL
+r = [1, 1, 1, 1, 2, 2], I = [] ...  TRIVIAL
+r = [1, 1, 1, 1, 1, 3], I = [] ...  TRIVIAL
+r = [1, 1, 2, 2, 2], I = [] ...  TRIVIAL
+r = [1, 1, 1, 2, 3], I = [] ...  TRIVIAL
+r = [1, 1, 1, 1, 4], I = [] ...  TRIVIAL
+r = [2, 2, 2, 2], I = [] ...  TRIVIAL
+r = [1, 2, 2, 3], I = [] ...  TRIVIAL
+r = [1, 1, 3, 3], I = [] ...  TRIVIAL
+r = [1, 1, 2, 4], I = [] ...  TRIVIAL
+r = [1, 1, 1, 5], I = [] ...  TRIVIAL
+r = [2, 3, 3], I = [] ...  TRIVIAL
+r = [2, 2, 4], I = [] ...  TRIVIAL
+r = [1, 3, 4], I = [] ...  TRIVIAL
+r = [1, 2, 5], I = [] ...  TRIVIAL
+r = [1, 1, 6], I = [] ...  TRIVIAL
+r = [4, 4], I = [] ...  TRIVIAL
+r = [3, 5], I = [] ...  TRIVIAL
+r = [2, 6], I = [] ...  TRIVIAL
+r = [1, 7], I = [] ...  TRIVIAL
+r = [8], I = [] ...  TRIVIAL
+r = [1, 1, 1, 1, 1, 1, 1, 1], I = [0] ...  TRIVIAL
+r = [1, 1, 1, 1, 1, 1, 2], I = [0] ...  TRIVIAL
+r = [1, 1, 1, 1, 2, 2], I = [0] ...  TRIVIAL
+r = [1, 1, 1, 1, 1, 3], I = [0] ...  TRIVIAL
+r = [1, 1, 2, 2, 2], I = [0] ...  TRIVIAL
+r = [1, 1, 1, 2, 3], I = [0] ...  TRIVIAL
+r = [1, 1, 1, 1, 4], I = [0] ...  TRIVIAL
+r = [1, 2, 2, 3], I = [0] ...  TRIVIAL
+r = [1, 1, 3, 3], I = [0] ...  TRIVIAL
+r = [1, 1, 2, 4], I = [0] ...  TRIVIAL
+r = [1, 1, 1, 5], I = [0] ...  TRIVIAL
+r = [1, 3, 4], I = [0] ...  TRIVIAL
+r = [1, 2, 5], I = [0] ...  TRIVIAL
+r = [1, 1, 6], I = [0] ...  TRIVIAL
+r = [1, 7], I = [0] ...  TRIVIAL
+r = [1, 1, 1, 1, 1, 1, 1, 1], I = [0, 1] ...  TRIVIAL
+r = [1, 1, 1, 1, 1, 1, 2], I = [0, 1] ...  TRIVIAL
+r = [1, 1, 1, 1, 2, 2], I = [0, 1] ...  TRIVIAL
+r = [1, 1, 1, 1, 1, 3], I = [0, 1] ...  TRIVIAL
+r = [1, 1, 2, 2, 2], I = [0, 1] ...  TRIVIAL
+r = [1, 1, 1, 2, 3], I = [0, 1] ...  TRIVIAL
+r = [1, 1, 1, 1, 4], I = [0, 1] ...  TRIVIAL
+r = [1, 1, 3, 3], I = [0, 1] ...  TRIVIAL
+r = [1, 1, 2, 4], I = [0, 1] ...  TRIVIAL
+r = [1, 1, 1, 5], I = [0, 1] ...  TRIVIAL
+r = [1, 1, 6], I = [0, 1] ...  TRIVIAL
+r = [1, 1, 1, 1, 1, 1, 2], I = [6] ...  CO-TRIVIAL
+r = [1, 1, 1, 1, 2, 2], I = [4] ...  todo
+r = [1, 1, 2, 2, 2], I = [2] ...  todo
+r = [1, 1, 1, 2, 3], I = [3] ...  todo
+r = [2, 2, 2, 2], I = [0] ...  TRIVIAL
+r = [1, 2, 2, 3], I = [1] ...  todo
+r = [1, 1, 2, 4], I = [2] ...  todo
+r = [2, 3, 3], I = [0] ...  TRIVIAL
+r = [2, 2, 4], I = [0] ...  TRIVIAL
+r = [1, 2, 5], I = [1] ...  todo
+r = [2, 6], I = [0] ...  TRIVIAL
+r = [1, 1, 1, 1, 1, 1, 1, 1], I = [0, 1, 2] ...  TRIVIAL
+r = [1, 1, 1, 1, 1, 1, 2], I = [0, 1, 2] ...  TRIVIAL
+r = [1, 1, 1, 1, 2, 2], I = [0, 1, 2] ...  TRIVIAL
+r = [1, 1, 1, 1, 1, 3], I = [0, 1, 2] ...  TRIVIAL
+r = [1, 1, 1, 2, 3], I = [0, 1, 2] ...  TRIVIAL
+r = [1, 1, 1, 1, 4], I = [0, 1, 2] ...  TRIVIAL
+r = [1, 1, 1, 5], I = [0, 1, 2] ...  TRIVIAL
+r = [1, 1, 1, 1, 1, 1, 2], I = [0, 6] ...  todo
+r = [1, 1, 1, 1, 2, 2], I = [0, 4] ...  todo
+r = [1, 1, 2, 2, 2], I = [0, 2] ...  todo
+r = [1, 1, 1, 2, 3], I = [0, 3] ...  todo
+r = [1, 2, 2, 3], I = [0, 1] ...  TRIVIAL
+r = [1, 1, 2, 4], I = [0, 2] ...  todo
+r = [1, 2, 5], I = [0, 1] ...  TRIVIAL
+r = [1, 1, 1, 1, 1, 3], I = [5] ...  CO-TRIVIAL
+r = [1, 1, 1, 2, 3], I = [4] ...  CO-TRIVIAL
+r = [1, 2, 2, 3], I = [3] ...  CO-TRIVIAL
+r = [1, 1, 3, 3], I = [2] ...  todo
+r = [2, 3, 3], I = [1] ...  todo
+r = [1, 3, 4], I = [1] ...  todo
+r = [3, 5], I = [0] ...  TRIVIAL
+r = [1, 1, 1, 1, 1, 1, 1, 1], I = [0, 1, 2, 3] ...  TRIVIAL
+r = [1, 1, 1, 1, 1, 1, 2], I = [0, 1, 2, 3] ...  TRIVIAL
+r = [1, 1, 1, 1, 2, 2], I = [0, 1, 2, 3] ...  TRIVIAL
+r = [1, 1, 1, 1, 1, 3], I = [0, 1, 2, 3] ...  TRIVIAL
+r = [1, 1, 1, 1, 4], I = [0, 1, 2, 3] ...  TRIVIAL
+r = [1, 1, 1, 1, 1, 1, 2], I = [0, 1, 6] ...  todo
+r = [1, 1, 1, 1, 2, 2], I = [0, 1, 4] ...  todo
+r = [1, 1, 2, 2, 2], I = [0, 1, 2] ...  TRIVIAL
+r = [1, 1, 1, 2, 3], I = [0, 1, 3] ...  todo
+r = [1, 1, 2, 4], I = [0, 1, 2] ...  TRIVIAL
+r = [1, 1, 1, 1, 2, 2], I = [4, 5] ...  CO-TRIVIAL
+r = [1, 1, 2, 2, 2], I = [2, 3] ...  todo
+r = [2, 2, 2, 2], I = [0, 1] ...  TRIVIAL
+r = [1, 2, 2, 3], I = [1, 2] ...  todo
+r = [2, 2, 4], I = [0, 1] ...  TRIVIAL
+r = [1, 1, 1, 1, 1, 3], I = [0, 5] ...  todo
+r = [1, 1, 1, 2, 3], I = [0, 4] ...  todo
+r = [1, 2, 2, 3], I = [0, 3] ...  todo
+r = [1, 1, 3, 3], I = [0, 2] ...  todo
+r = [1, 3, 4], I = [0, 1] ...  TRIVIAL
+r = [1, 1, 1, 1, 4], I = [4] ...  CO-TRIVIAL
+r = [1, 1, 2, 4], I = [3] ...  CO-TRIVIAL
+r = [2, 2, 4], I = [2] ...  CO-TRIVIAL
+r = [1, 3, 4], I = [2] ...  CO-TRIVIAL
+r = [4, 4], I = [0] ...  TRIVIAL
+r = [1, 1, 1, 1, 1, 1, 1, 1], I = [0, 1, 2, 3, 4] ...  TRIVIAL
+r = [1, 1, 1, 1, 1, 1, 2], I = [0, 1, 2, 3, 4] ...  TRIVIAL
+r = [1, 1, 1, 1, 1, 3], I = [0, 1, 2, 3, 4] ...  TRIVIAL
+r = [1, 1, 1, 1, 1, 1, 2], I = [0, 1, 2, 6] ...  todo
+r = [1, 1, 1, 1, 2, 2], I = [0, 1, 2, 4] ...  todo
+r = [1, 1, 1, 2, 3], I = [0, 1, 2, 3] ...  TRIVIAL
+r = [1, 1, 1, 1, 2, 2], I = [0, 4, 5] ...  todo
+r = [1, 1, 2, 2, 2], I = [0, 2, 3] ...  todo
+r = [1, 2, 2, 3], I = [0, 1, 2] ...  TRIVIAL
+r = [1, 1, 1, 1, 1, 3], I = [0, 1, 5] ...  todo
+r = [1, 1, 1, 2, 3], I = [0, 1, 4] ...  todo
+r = [1, 1, 3, 3], I = [0, 1, 2] ...  TRIVIAL
+r = [1, 1, 1, 2, 3], I = [3, 4] ...  CO-TRIVIAL
+r = [1, 2, 2, 3], I = [1, 3] ...  todo
+r = [2, 3, 3], I = [0, 1] ...  TRIVIAL
+r = [1, 1, 1, 1, 4], I = [0, 4] ...  todo
+r = [1, 1, 2, 4], I = [0, 3] ...  todo
+r = [1, 3, 4], I = [0, 2] ...  todo
+r = [1, 1, 1, 5], I = [3] ...  CO-TRIVIAL
+r = [1, 2, 5], I = [2] ...  CO-TRIVIAL
+r = [3, 5], I = [1] ...  CO-TRIVIAL
+r = [1, 1, 1, 1, 1, 1, 1, 1], I = [0, 1, 2, 3, 4, 5] ...  TRIVIAL
+r = [1, 1, 1, 1, 1, 1, 2], I = [0, 1, 2, 3, 4, 5] ...  TRIVIAL
+r = [1, 1, 1, 1, 1, 1, 2], I = [0, 1, 2, 3, 6] ...  todo
+r = [1, 1, 1, 1, 2, 2], I = [0, 1, 2, 3, 4] ...  TRIVIAL
+r = [1, 1, 1, 1, 2, 2], I = [0, 1, 4, 5] ...  todo
+r = [1, 1, 2, 2, 2], I = [0, 1, 2, 3] ...  TRIVIAL
+r = [1, 1, 1, 1, 1, 3], I = [0, 1, 2, 5] ...  todo
+r = [1, 1, 1, 2, 3], I = [0, 1, 2, 4] ...  todo
+r = [1, 1, 2, 2, 2], I = [2, 3, 4] ...  CO-TRIVIAL
+r = [2, 2, 2, 2], I = [0, 1, 2] ...  TRIVIAL
+r = [1, 1, 1, 2, 3], I = [0, 3, 4] ...  todo
+r = [1, 2, 2, 3], I = [0, 1, 3] ...  todo
+r = [1, 1, 1, 1, 4], I = [0, 1, 4] ...  todo
+r = [1, 1, 2, 4], I = [0, 1, 3] ...  todo
+r = [1, 1, 3, 3], I = [2, 3] ...  CO-TRIVIAL
+r = [2, 3, 3], I = [1, 2] ...  CO-TRIVIAL
+r = [1, 1, 2, 4], I = [2, 3] ...  CO-TRIVIAL
+r = [2, 2, 4], I = [0, 2] ...  todo
+r = [1, 1, 1, 5], I = [0, 3] ...  todo
+r = [1, 2, 5], I = [0, 2] ...  todo
+r = [1, 1, 6], I = [2] ...  CO-TRIVIAL
+r = [2, 6], I = [1] ...  CO-TRIVIAL
+r = [1, 1, 1, 1, 1, 1, 1, 1], I = [0, 1, 2, 3, 4, 5, 6] ...  TRIVIAL
+r = [1, 1, 1, 1, 1, 1, 2], I = [0, 1, 2, 3, 4, 6] ...  todo
+r = [1, 1, 1, 1, 2, 2], I = [0, 1, 2, 4, 5] ...  todo
+r = [1, 1, 1, 1, 1, 3], I = [0, 1, 2, 3, 5] ...  todo
+r = [1, 1, 2, 2, 2], I = [0, 2, 3, 4] ...  todo
+r = [1, 1, 1, 2, 3], I = [0, 1, 3, 4] ...  todo
+r = [1, 1, 1, 1, 4], I = [0, 1, 2, 4] ...  todo
+r = [1, 2, 2, 3], I = [1, 2, 3] ...  CO-TRIVIAL
+r = [1, 1, 3, 3], I = [0, 2, 3] ...  todo
+r = [1, 1, 2, 4], I = [0, 2, 3] ...  todo
+r = [1, 1, 1, 5], I = [0, 1, 3] ...  todo
+r = [1, 3, 4], I = [1, 2] ...  CO-TRIVIAL
+r = [1, 2, 5], I = [1, 2] ...  CO-TRIVIAL
+r = [1, 1, 6], I = [0, 2] ...  todo
+r = [1, 7], I = [1] ...  CO-TRIVIAL
+r = [1, 1, 1, 1, 1, 1, 1, 1], I = [0, 1, 2, 3, 4, 5, 6, 7] ...  TRIVIAL
+r = [1, 1, 1, 1, 1, 1, 2], I = [0, 1, 2, 3, 4, 5, 6] ...  TRIVIAL
+r = [1, 1, 1, 1, 2, 2], I = [0, 1, 2, 3, 4, 5] ...  TRIVIAL
+r = [1, 1, 1, 1, 1, 3], I = [0, 1, 2, 3, 4, 5] ...  TRIVIAL
+r = [1, 1, 2, 2, 2], I = [0, 1, 2, 3, 4] ...  TRIVIAL
+r = [1, 1, 1, 2, 3], I = [0, 1, 2, 3, 4] ...  TRIVIAL
+r = [1, 1, 1, 1, 4], I = [0, 1, 2, 3, 4] ...  TRIVIAL
+r = [2, 2, 2, 2], I = [0, 1, 2, 3] ...  TRIVIAL
+r = [1, 2, 2, 3], I = [0, 1, 2, 3] ...  TRIVIAL
+r = [1, 1, 3, 3], I = [0, 1, 2, 3] ...  TRIVIAL
+r = [1, 1, 2, 4], I = [0, 1, 2, 3] ...  TRIVIAL
+r = [1, 1, 1, 5], I = [0, 1, 2, 3] ...  TRIVIAL
+r = [2, 3, 3], I = [0, 1, 2] ...  TRIVIAL
+r = [2, 2, 4], I = [0, 1, 2] ...  TRIVIAL
+r = [1, 3, 4], I = [0, 1, 2] ...  TRIVIAL
+r = [1, 2, 5], I = [0, 1, 2] ...  TRIVIAL
+r = [1, 1, 6], I = [0, 1, 2] ...  TRIVIAL
+r = [4, 4], I = [0, 1] ...  TRIVIAL
+r = [3, 5], I = [0, 1] ...  TRIVIAL
+r = [2, 6], I = [0, 1] ...  TRIVIAL
+r = [1, 7], I = [0, 1] ...  TRIVIAL
+r = [8], I = [0] ...  TRIVIAL
+
+*** Counting Non-trivial Levels ***
+
+r = [1, 1, 1, 1, 2, 2], I = [4] (1/54) ...  2854552
+r = [1, 1, 2, 2, 2], I = [2] (2/54) ...  [Errno 31] Too many links: '/home/bael/.sage//temp/kimchi/27457/'
+ ** Error trying to create the Sage tmp directory in your home directory.  A possible cause of this might be that you built or upgraded Sage after typing 'su'.  You probably need to delete the directory $HOME/.sage.
+Killing any remaining workers...
+Traceback (most recent call last):
+  File "count_levels.py", line 173, in <module>
+    count_all_levels2(n, pretty=True)
+  File "count_levels.py", line 155, in count_all_levels2
+    count[str_r_I] = count_kpj_levels_parallel(r,I)
+  File "count_levels.py", line 122, in count_kpj_levels_parallel
+    count += X[1]
+  File "element.pyx", line 996, in sage.structure.element.ModuleElement.__iadd__ (sage/structure/element.c:8141)
+  File "coerce.pyx", line 795, in sage.structure.coerce.CoercionModel_cache_maps.bin_op (sage/structure/coerce.c:7475)
+TypeError: unsupported operand parent(s) for '+': 'Integer Ring' and '<type 'str'>'
+bael@kimchi:~/Dropbox/git/math/KPJStrata$ [Kbael@kimchi:~/Dropbox/git/math/KPJStrata$ htop
+(B)0[?1049h[1;24r[m[4l[?1h=[?25l[39;49m[39;49m[m[H[J[1B  [36m1  [39;49m[1m[[m[32m|||||[30m[1m                    14.3%[39;49m][m     [36mTasks: [1m236[m[36m total, [32m[1m1[m[36m running[3;3H2  [39;49m[1m[[30m                          0.0%[39;49m][m     [36mLoad average: [30m[1m0.06 [39;49m[m0.14 [1m0.08 [4;3H[m[36m3  [39;49m[1m[[30m                          0.0%[39;49m][m     [36mUptime: [1m19 days, 11:22:27[5;3H[m[36m4  [39;49m[1m[[30m                          0.0%[39;49m][6;3H[m[36m5  [39;49m[1m[[30m                         -nan%[39;49m][7;3H[m[36m6  [39;49m[1m[[30m                         -nan%[39;49m][8;3H[m[36m7  [39;49m[1m[[30m                          0.0%[39;49m][9;3H[m[36m8  [39;49m[1m[[30m                         -nan%[39;49m][10;3H[m[36m9  [39;49m[1m[[m[32m|||[30m[1m                       9.1%[39;49m][11;3H[m[36m10 [39;49m[1m[[30m                         -nan%[39;49m][12;3H[m[36m11 [39;49m[1m[[30m                          0.0%[39;49m][13;3H[m[36m12 [39;49m[1m[[m[32m|||[31m||||||||||[30m[1m            41.7%[39;49m][14;3H[m[36m13 [39;49m[1m[[30m                         -nan%[39;49m][15;3H[m[36m14 [39;49m[1m[[30m                         -nan%[39;49m][16;3H[m[36m15 [39;49m[1m[[30m                          0.0%[39;49m][17;3H[m[36m16 [39;49m[1m[[30m                         -nan%[39;49m][18;3H[m[36mMem[39;49m[1m[[m[32m|[34m|[33m|[30m[1m                763/48392MB[39;49m][19;3H[m[36mSwp[39;49m[1m[[30m                     0/57858MB[39;49m][2B[m[30m[42m  PID USER     PRI  NI  VIRT   RES   SHR S [30m[46mCPU% [30m[42mMEM%   TIME+  Command           [22;1H[30m[46m27805 bael      20   0 19476  1396  1000 R 41.0  0.0  0:00.05 htop              [23;2H[39;49m[m1620 [30m[1mroot     [39;49m[m 20   0 [36m 143M 55[39;49m[m888 [36m 9[39;49m[m432 S 20.0  0.1 [31m[1m53h[39;49m[m03:34 /usr/bin/X :0 vt7[1BF1[30m[46mHelp  [39;49m[mF2[30m[46mSetup [39;49m[mF3[30m[46mSearch[39;49m[mF4[30m[46mInvert[39;49m[mF5[30m[46mTree  [39;49m[mF6[30m[46mSortBy[39;49m[mF7[30m[46mNice -[39;49m[mF8[30m[46mNice +[39;49m[mF9[30m[46mKill  [39;49m[mF10[30m[46mQuit [1@t[H[39;49m[m[2;8H[30m[1m    [2;32H 1[4;7H[m[32m|[4;35H[30m[1m6[4;67H[36m8[6;32H[30m 0.0[7;32H 0.0[9;32H 0.0[10;7H   [10;33H0.0[13;7H[m[31m|[30m[1m            [13;32H 0[2B 0.0[22;26H[m[30m[46m584  1476  1072 R  [22;61H7[23;44H[39;49m[m 1[H[2;33H[30m[1m0.8[4;7H [4;35H0[4;66H[36m30[6;32H[30m-nan[11;32H 0.0[13;7H[m[32m|[31m|[13;33H[30m[1m1.3[15;32H-nan[22;61H[m[30m[46m9[23;45H[39;49m[m0[H[23B[J[34h[?25h[24;1H[?1049l[?1l>bael@kimchi:~/Dropbox/git/math/KPJStrata$ [Kbael@kimchi:~/Dropbox/git/math/KPJStrata$ [Kbael@kimchi:~/Dropbox/git/math/KPJStrata$ [Kbael@kimchi:~/Dropbox/git/math/KPJStrata$ [Kbael@kimchi:~/Dropbox/git/math/KPJStrata$ [Kbael@kimchi:~/Dropbox/git/math/KPJStrata$ [Kbael@kimchi:~/Dropbox/git/math/KPJStrata$ [Kbael@kimchi:~/Dropbox/git/math/KPJStrata$ [Kbael@kimchi:~/Dropbox/git/math/KPJStrata$ [Kbael@kimchi:~/Dropbox/git/math/KPJStrata$ [Kbael@kimchi:~/Dropbox/git/math/KPJStrata$ exit
+exit
+
+Script done on Wed 28 Sep 2011 09:33:56 AM CDT

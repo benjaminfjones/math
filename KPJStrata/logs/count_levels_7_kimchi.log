@@ -1,0 +1,7 @@
+sage: attach("attach.sage")
+sage: count_all_levels2(7)
+...
+Count = 22569008
+sage: quit
+Exiting Sage (CPU time 21m6.12s, Wall time 22m44.33s).
+
