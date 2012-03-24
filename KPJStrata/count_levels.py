@@ -126,7 +126,7 @@ def count_kpj_levels_parallel(r, I):
 # This counting function works well up to n=6
 #
 
-def count_all_levels2(n, pretty=False):
+def count_all_levels2(n, pretty=False, count_trivial=False):
     count = dict()
     todo = []
     for (r,I) in quivers(n):
@@ -147,6 +147,8 @@ def count_all_levels2(n, pretty=False):
     print '\n*** Counting Non-trivial Levels ***\n'
     number_todo = len(todo)
     i = Integer(0)
+    if count_trivial:
+        todo = quivers(n)
     for (r,I) in todo:
         i += Integer(1)
         str_r_I = "r = %s, I = %s" % (r,I)
