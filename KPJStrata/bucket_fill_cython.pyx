@@ -1,26 +1,27 @@
-# load "/Users/jonesbe/Desktop/svn/sage_code/KPJStrata/bucket_fill.spyx"
+# bucket_fill_cython.pyx
+# Author: Benjamin Jones <benjaminfjones@gmail.com>
 #
-# LOG
-# TODO 3/17/2011 
-# optimize subord_bipartitions_c more (see profile)
+# This file contains Cython optimized routines which are used in block_fill.py.
+#
 
-def block_fill_c(int n1, int n2, int n3, int n4):
-    cdef int x
-    L = [2 for x in range(n1)]
-    L.extend([1 for x in range(n2)])
-    L.extend([-1 for x in range(n3)])
-    L.extend([0 for x in range(n4)])
-    return L
+from libc.stdlib cimport calloc, malloc, free
 
-# Fastest time so far:
-# sage: timeit('C = bucket_vec_fill2_c([5,4,3,2,1],8)')
-# 5 loops, best of 3: 59 ms per loop
-#
-# After eliminating function call to block_fill_c:
-#
-# sage: %timeit C = bucket_vec_fill2_c([5,4,3,2,1],8)
-# 25 loops, best of 3: 27.7 ms per loop
-#
+cdef void block_fill_c(int *s, int n1, int n2, int n3, int n4):
+    """
+    Fill array `s` with the indicated number of 2's, 1's, -1's, and 0's.
+    """
+    cdef int x, i
+    x = n1+n2+n3+n4
+    for i from 0 <= i < n1:
+        s[i] = 2
+    for i from n1 <= i < n1+n2:
+        s[i] = 1
+    for i from n1+n2 <= i < x-n4:
+        s[i] = -1
+    for i from x-n4 <= i < x:
+        s[i] = 0
+
+
 def bucket_vec_fill2_c(b, int n):
     """
     Distribute n objects among buckets with capacity b[i].
@@ -29,18 +30,26 @@ def bucket_vec_fill2_c(b, int n):
     --sorted in that order--
     having weights 2, 1, 1, and 0, respectively.
 
-    The routine returns a generator object for such
-    distributions.
+    The routine returns a list of all such distributions.
+
+    TIMING: timeit('C = bucket_vec_fill2_c([5,4,3,2,1],8)')
+
+    Original code:
+    5 loops, best of 3: 59 ms per loop
+
+    After eliminating function call to block_fill_c:
+    25 loops, best of 3: 27.7 ms per loop
+
+    After factoring out block_fill_c to use C int array
+    25 loops, best of 3: 25.6 ms per loop
     """
-    # define local names to avoid lookup
-    # my_bucket_vec_fill = bucket_vec_fill2_gen
-    #     my_block_fill = block_fill_c # implimented in cython
-    #     my_range = range
-    #     my_min = min
-    #     my_max = max
-    #     my_floor = floor
-    cdef int l = len(b)
-    cdef int bz, i, two_min, two_max, h1, h2, x
+    cdef int l  # length of b
+    cdef int bz # last entry of b
+    cdef int *s # temporary storage for block_fill_c
+    cdef i, j, two_min, two_max, h1, h2, x, k
+    cdef list R, v # python lists for return results
+
+    l = len(b)
     # base case
     if l == 0:
         if n == 0:
@@ -49,12 +58,13 @@ def bucket_vec_fill2_c(b, int n):
             return []
     # l > 0 case
     elif l > 1 or (l == 1 and 2*b[0] >= n):
-        R = []; R_append = R.append
+        R = []
+        R_append = R.append # avoid lookup
         bz = b[l-1]
         bp = b[0:l-1]
-        t = [0 for x in range(bz)]
         j = min(2*bz, n)
-        for i in range(j+1):
+        s = <int*> malloc(bz * sizeof(int)) # allocate temp storage
+        for i from 0 <= i < j+1:
             for v in bucket_vec_fill2_c(bp, n-i):
                 two_min = max(i-bz, 0)
                 if i % 2 == 0:
@@ -64,15 +74,9 @@ def bucket_vec_fill2_c(b, int n):
                 for h2 in range(two_min, two_max+1):
                     h1 = i-2*h2
                     for k in range(h1+1):
-                        for x in range(0,h2):
-                            t[x] = 2
-                        for x in range(h2, h2+k):
-                            t[x] = 1
-                        for x in range(h2+k, h2+h1):
-                            t[x] = -1
-                        for x in range(h2+h1, bz):
-                            t[x] = 0
-                        R_append(v + t)
+                        block_fill_c(s, h2, k, h1-k, bz-h2-h1) # factored out
+                        R_append(v + [ s[x] for x in range(bz) ])
+        free(s)
         return R
     else:
         return []
@@ -93,34 +97,34 @@ def bucket_vec_fill1_c(int b, int n):
         sage: bucket_vec_fill1_c(5,3)
         [[-1, -1, -1, 0, 0], [1, -1, -1, 0, 0], [1, 1, -1, 0, 0], [1, 1, 1, 0, 0]]
 
+    TIMING:
+
+        timeit('C = bucket_vec_fill1_c(200,100)')
+        625 loops, best of 3: 537 µs per loop
     """
-    cdef int i, j
+    cdef int i, x
+    cdef list R
     if b == 0:
         if n == 0:
             return [[]]
         else:
             return []
     elif n <= b:
-        R = []; R_append = R.append
-        for i in range(n+1):
-            t = []; t_append = t.append
-            for x in range(i):
-                t_append(1)
-            for x in range(n-i):
-                t_append(-1)
-            for x in range(b-n):
-                t_append(0)
-            R_append(t)
+        R = []
+        R_append = R.append
+        s = <int*> malloc(b * sizeof(int))
+        for i from 0 <= i < n+1:
+            for x from 0 <= x < i:
+                s[x] = 1
+            for x from i <= x < n:
+                s[x] = -1
+            for x from n <= x < b:
+                s[x] = 0
+            R_append([ s[x] for x in range(b) ])
         return R
     else:
         return []
 
-# sage: timeit subord_bipartitions_c( [2,3,2,1,2,0,1], [4,2,3,3,1,2,0], [-1,1,-1,1,-1,-1,1] )
-# 625 loops, best of 3: 71.8 µs per loop
-#
-# After eliminating function call to floor_over_two_c:
-# sage: %timeit subord_bipartitions_c( [2,3,2,1,2,0,1], [4,2,3,3,1,2,0], [-1,1,-1,1,-1,-1,1] )
-# 625 loops, best of 3: 9.67 µs per loop
 
 def subord_bipartitions_c( mu, nu, ep):
     """
@@ -136,17 +140,33 @@ def subord_bipartitions_c( mu, nu, ep):
         sage: subord_bipartitions_c( [2,3,2,1,2,0,1], [4,2,3,3,1,2,0], [-1,1,-1,1,-1,-1,1] )
         [[[2, 2, 1, 1, 1, 1, 1], [1, 1, 1, 1, 0, 0, 0]], [[1, 1, 1, 1, 1, 0], [2, 2, 1, 1, 1, 1]]]
 
+    TIMING: %timeit subord_bipartitions_c( [2,3,2,1,2,0,1], [4,2,3,3,1,2,0], [-1,1,-1,1,-1,-1,1] )
+
+        Original code:
+        625 loops, best of 3: 71.8 µs per loop
+
+        After eliminating function call to floor_over_two_c:
+        625 loops, best of 3: 9.67 µs per loop
+
+        After allocating int* arrays manually:
+        625 loops, best of 3: 6.78 µs per loop
     """
     cdef int i
     cdef int n = len(mu)
-    mup = [0 for i in range(n)]
-    nup = [0 for i in range(n)]
-    mum = [0 for i in range(n)]
-    num = [0 for i in range(n)]
-    mui = [ <int>mu[i] for i in range(n) ]
-    nui = [ <int>nu[i] for i in range(n) ]
-    epi = [ <int>ep[i] for i in range(n) ]
-    for i in range(n):
+    cdef int *mup, *nup, *mum, *num, *mui, *nui, *epi
+    cdef list r_mup, r_nup, r_mum, r_num
+    mup = <int*> malloc(n * sizeof(int))
+    nup = <int*> malloc(n * sizeof(int))
+    mum = <int*> malloc(n * sizeof(int))
+    num = <int*> malloc(n * sizeof(int))
+    mui = <int*> malloc(n * sizeof(int))
+    nui = <int*> malloc(n * sizeof(int))
+    epi = <int*> malloc(n * sizeof(int))
+    for i from 0 <= i < n:
+        mui[i] = <int>mu[i]
+        nui[i] = <int>nu[i]
+        epi[i] = <int>ep[i]
+    for i from 0 <= i < n:
         if mui[i] > 0 and ((epi[i] == 1 and mui[i] % 2 == 0) or
                            (epi[i] == -1 and mui[i] % 2 == 1)):
             mup[i] = mui[i]/2
@@ -158,26 +178,38 @@ def subord_bipartitions_c( mu, nu, ep):
             nup[i] = (mui[i] + nui[i] + (1+epi[i])/2)/2 - mup[i]
             mum[i] = mui[i]/2
             num[i] = (mui[i] + nui[i] + (1-epi[i])/2)/2 - mum[i]
-    return [ mup, nup, mum, num ]
+    r_mup = [ mup[i] for i in range(n) ]
+    r_nup = [ nup[i] for i in range(n) ]
+    r_mum = [ mum[i] for i in range(n) ]
+    r_num = [ num[i] for i in range(n) ]
+    free(mup)
+    free(nup)
+    free(mum)
+    free(num)
+    free(mui)
+    free(nui)
+    free(epi)
+    return [ r_mup, r_nup, r_mum, r_num ]
 
+# Below are various small helper functions, these could be inline.
 
 cpdef int descent_position_c(L):
     cdef int i
-    for i in range(len(L)-1):
+    for i from 0 <= i < len(L)-1:
         if L[i] < L[i+1]:
             return i
     return -1
 
 cpdef int descent_position2_c(L,M):
     cdef int i
-    for i in range(len(L)-1):
+    for i from 0 <= i < len(L)-1:
         if L[i] < L[i+1] or M[i] < M[i+1]:
             return i
     return -1
 
 cpdef int zero_position2_c(L,M):
     cdef int i
-    for i in range(len(L)):
+    for i from 0 <= i < len(L):
         if L[i] == 0 and M[i] == 0:
             return i
     return -1
