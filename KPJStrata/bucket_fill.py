@@ -166,8 +166,8 @@ def bipartitionize( bp ):
     item_getter_1 = operator.itemgetter(1)
     item_getter_2 = operator.itemgetter(2)
     # local copies to work on
-    mu_t = copy(bp[0])
-    nu_t = copy(bp[1])
+    mu_t = bp[0][:]
+    nu_t = bp[1][:]
     r = len(mu_t) - len(nu_t)
     # pad mu and nu
     if r >= 0:
@@ -257,16 +257,26 @@ def compatible_bipartitions(p, n, e, debug=False):
         [[1, 1, 1, 1, 1, 1, 1], [1, 0, 0, 0, 0, 0, 0]]
         [[1, 0, 0, 0, 0, 0, 0], [1, 1, 1, 1, 1, 1, 1]]
 
-        sage: %timeit list(compatible_bipartitions( [[5,4,3,2,1],[1,1,1,1,1]], 30, True ))
-        5 loops, best of 3: 2.69 s per loop
-        sage: time P = list(compatible_bipartitions( [[5,4,3,2,1],[1,1,1,1,1]], 30, True ))
-        CPU times: user 2.82 s, sys: 0.00 s, total: 2.66 s
+        TIMING: %timeit list(compatible_bipartitions( [[5,4,3,2,1],[1,1,1,1,1]], 30, True ))
 
-        After optimizing subord_bipartitions_c (better than GAP!)::
+            Original code:
+            5 loops, best of 3: 2.69 s per loop
 
-        sage: %timeit list(compatible_bipartitions( [[5,4,3,2,1],[1,1,1,1,1]], 30, True ))
-        5 loops, best of 3: 1.02 s per loop
+            After optimizing subord_bipartitions_c (better than GAP!):
+            5 loops, best of 3: 1.02 s per loop
 
+            After re-optimizing subord_bipartitions_c, block_fill_c, bucket_fill_vec2_c, etc..
+            5 loops, best of 3: 795 ms per loop
+
+        DEPENDS ON:
+
+            The following subroutines have been optimized using Cython. They
+            live in bucket_fill_c.pyx.
+
+            - bucket_vec_fill1_c
+            - bucket_vec_fill2_c
+            - subordinate_bipartitions_c
+            - bipartitionize
     """
     q = [ copy(p[0]), copy(p[1])]
     lam = sum_partitions(q[0], q[1])
