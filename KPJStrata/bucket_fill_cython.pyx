@@ -1,8 +1,5 @@
-# load "/Users/jonesbe/Desktop/svn/sage_code/KPJStrata/bucket_fill.spyx"
-#
 # LOG
-# TODO 3/17/2011 
-# optimize subord_bipartitions_c more (see profile)
+# TODO 3/17/2011 optimize subord_bipartitions_c more (see profile)
 
 def block_fill_c(int n1, int n2, int n3, int n4):
     cdef int x
@@ -29,16 +26,32 @@ def bucket_vec_fill2_c(b, int n):
     --sorted in that order--
     having weights 2, 1, 1, and 0, respectively.
 
-    The routine returns a generator object for such
-    distributions.
+    EXAMPLES::
+
+    sage: from bucket_fill_cython import bucket_vec_fill2_c
+    sage: bucket_vec_fill2_c([3,2,1], 10)
+    [[2, 2, 2, 2, 2, 0],
+    [2, 2, 2, 2, -1, -1],
+    [2, 2, 2, 2, -1, 1],
+    [2, 2, 2, 2, 1, -1],
+    [2, 2, 2, 2, 1, 1],
+    [2, 2, -1, 2, 2, -1],
+    [2, 2, -1, 2, 2, 1],
+    [2, 2, 1, 2, 2, -1],
+    [2, 2, 1, 2, 2, 1],
+    [2, 2, 2, -1, -1, 2],
+    [2, 2, 2, 1, -1, 2],
+    [2, 2, 2, 1, 1, 2],
+    [2, 2, 2, 2, 0, 2],
+    [2, 2, -1, 2, -1, 2],
+    [2, 2, -1, 2, 1, 2],
+    [2, 2, 1, 2, -1, 2],
+    [2, 2, 1, 2, 1, 2],
+    [2, -1, -1, 2, 2, 2],
+    [2, 1, -1, 2, 2, 2],
+    [2, 1, 1, 2, 2, 2],
+    [2, 2, 0, 2, 2, 2]]
     """
-    # define local names to avoid lookup
-    # my_bucket_vec_fill = bucket_vec_fill2_gen
-    #     my_block_fill = block_fill_c # implimented in cython
-    #     my_range = range
-    #     my_min = min
-    #     my_max = max
-    #     my_floor = floor
     cdef int l = len(b)
     cdef int bz, i, two_min, two_max, h1, h2, x
     # base case
@@ -160,6 +173,7 @@ def subord_bipartitions_c( mu, nu, ep):
             num[i] = (mui[i] + nui[i] + (1-epi[i])/2)/2 - mum[i]
     return [ mup, nup, mum, num ]
 
+## Beware: undocumented helper functions below:
 
 cpdef int descent_position_c(L):
     cdef int i
@@ -187,4 +201,3 @@ cpdef non_zero_c(int n):
         return False
     else:
         return True
-
